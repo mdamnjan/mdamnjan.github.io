@@ -1,0 +1,20 @@
+.navbar {
+    background-color: rgba(66, 133, 164, 0.589);
+    margin-bottom: 5%;
+    justify-content: flex-end;
+    display: flex;
+    padding: 10px;
+}
+
+.navbar-item {
+    margin-right: 1%;
+    text-decoration: none;
+}
+
+.current-navbar {
+    text-decoration: underline;
+}
+
+.navbar-item:hover {
+    text-decoration: underline;
+}

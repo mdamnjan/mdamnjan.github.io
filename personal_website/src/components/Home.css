@@ -1,0 +1,22 @@
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+.bi {
+    margin: 2px;
+    display: inline-block;
+    padding: 5px;
+    transform: scale(1.5);
+}
+
+.bi:hover {
+    color: aquamarine;
+    transform: scale(1.7);
+}
