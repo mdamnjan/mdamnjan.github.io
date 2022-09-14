@@ -10,7 +10,7 @@ a {
 }
 
 .bi {
-    margin: 2px;
+    margin: 4px;
     display: inline-block;
     padding: 5px;
     transform: scale(1.5);
@@ -18,5 +18,5 @@ a {
 
 .bi:hover {
     color: aquamarine;
-    transform: scale(1.7);
+    scale: 1.3;
 }

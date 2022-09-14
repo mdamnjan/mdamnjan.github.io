@@ -10,14 +10,28 @@ const Home = () => {
       <h1>About Me</h1>
       <p>
         Hi! I'm Mimi, a student at the University of Toronto, currently
-        finishing up a computer science specialist and a physics minor.
+        finishing up a computer science specialist and physics minor.
       </p>
-      <h4>
         <div className="contacts">
-          Contact Me: <a href="mailto:mimi.damnjanovic16@gmail.com"><i class="bi bi-envelope"></i></a>
-          <a href="https://github.com/mdamnjan" target="_blank"><i className="bi bi-github"></i></a>
+          <h2>Get in touch:</h2>{" "}
+          <a aria-label="email" href="mailto:mimi.damnjanovic16@gmail.com">
+            <i class="bi bi-envelope"></i>
+          </a>
+          <a
+            arial-label="github"
+            href="https://github.com/mdamnjan"
+            target="_blank"
+          >
+            <i className="bi bi-github"></i>
+          </a>
+          <a
+            aria-label="linkedin"
+            href="https://ca.linkedin.com/in/mimi-damnjanovic-b1a21b206"
+            target="_blank"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
         </div>
-      </h4>
     </div>
   );
 };
