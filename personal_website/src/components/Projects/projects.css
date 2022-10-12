@@ -1,0 +1,31 @@
+.projects-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-container {
+    width: 40%;
+    background-color: rgb(40, 43, 58);
+    margin: auto;
+    color: rgb(212, 209, 209);
+    padding: 20px 30px;
+    text-align: left;
+    display: inline-block;
+}
+
+.project-container:not(:last-child) {
+    border-bottom: 2px solid rgb(212, 209, 209);;
+}
+
+li {
+    display: inline-block;
+    margin: 5px;   
+}
+
+.links {
+    float: right;
+}
+
+
+
+
