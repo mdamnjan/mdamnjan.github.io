@@ -26,9 +26,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        
-    - name: Navigate to folder
-      run: cd ../../personal_website
       
     - name: Install dependencies
       run: npm install
