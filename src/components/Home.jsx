@@ -21,6 +21,7 @@ const Home = () => {
             arial-label="github"
             href="https://github.com/mdamnjan"
             target="_blank"
+	    rel="noreferrer"
           >
             <i className="bi bi-github"></i>
           </a>
@@ -28,6 +29,7 @@ const Home = () => {
             aria-label="linkedin"
             href="https://ca.linkedin.com/in/mimi-damnjanovic-b1a21b206"
             target="_blank"
+	    rel="noreferrer"
           >
             <i class="bi bi-linkedin"></i>
           </a>
