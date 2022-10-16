@@ -15,6 +15,7 @@ const Project = ({ title, description, techStack, liveLink, githubLink }) => {
           arial-label="github"
           href={githubLink}
           target="_blank"
+	  rel="noreferrer"
         >
           <i className="bi bi-github"></i>
         </a>

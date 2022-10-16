@@ -3,7 +3,7 @@ import Home from "./components/Home";
 import Resume from "./components/Resume/Resume";
 import NavBar from "./components/NavBar/NavBar";
 import Projects from "./components/Projects/Projects";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
