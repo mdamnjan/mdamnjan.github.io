@@ -4,9 +4,9 @@ import "./NavBar.css";
 const NavBar = () => {
   const location = useLocation().pathname;
   const navBarItems = [
-    { display: "About Me", path: "/about-me" },
-    { display: "Resume", path: "/resume" },
-    { display: "Projects", path: "/projects" },
+    { display: "About Me", path: "/#/about-me" },
+    { display: "Resume", path: "/#/resume" },
+    { display: "Projects", path: "/#/projects" },
   ].map((item) => {
     let className =
       location === item.path ? "current-navbar navbar-item" : "navbar-item";
