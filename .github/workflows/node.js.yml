@@ -4,10 +4,12 @@
 name: Node.js CI
 
 on:
+  workflow_dispatch:
+    branches: ["main", "gh-actions"]
   push:
-    branches: [ "main" ]
+    branches: [ "main", "gh-actions" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "gh-actions" ]
 
 jobs:
   build:
