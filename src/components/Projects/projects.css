@@ -1,16 +1,21 @@
 .projects-list {
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
 }
 
 .project-container {
-    width: 40%;
+    width: 50%;
     background-color: rgb(40, 43, 58);
     margin: auto;
     color: rgb(212, 209, 209);
     padding: 20px 30px;
     text-align: left;
     display: inline-block;
+}
+
+.project-container > p {
+    width: 100%;
 }
 
 .project-container:not(:last-child) {
