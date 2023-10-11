@@ -32,7 +32,7 @@ function App() {
         <h1>Projects</h1>
         <Projects />
       </section>
-      <footer id="contact-me">
+      <footer id="contact">
         <div className="contacts">
           <h2>Get in touch:</h2>{" "}
           <a aria-label="email" href="mailto:midamnjan@gmail.com">

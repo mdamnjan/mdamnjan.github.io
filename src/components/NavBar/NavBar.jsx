@@ -5,7 +5,7 @@ const NavBar = () => {
     { display: "About Me", path: "/#about-me" },
     { display: "Skills", path: "/#skills" },
     { display: "Projects", path: "/#projects" },
-    { display: "Contact Me", path: "/#contact-me" },
+    { display: "Contact", path: "/#contact" },
   ].map((item) => {
     let className =
       window.location === item.path
