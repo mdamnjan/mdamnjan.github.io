@@ -10,7 +10,7 @@ function App() {
         <NavBar />
       </header>
       <section id="about-me">
-        <img alt="Headshot of Mimi Damnjanovic" src="/profile_pic2.jpg" />
+        <img alt="Headshot of Mimi Damnjanovic" src="/profile_pic.jpg" />
         <h1>About Me</h1>
         <p>
           Hi! I'm Mimi, a recent graduate from the University of Toronto, where
