@@ -1,9 +1,9 @@
 .navbar {
-    background-color: rgb(0, 19, 40);
+    background-color: var(--footer-color);
     margin-bottom: 5%;
     justify-content: flex-end;
     display: flex;
-    padding: 10px;
+    padding: 20px;
 }
 
 .navbar-item {

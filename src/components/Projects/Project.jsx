@@ -7,7 +7,7 @@ const Project = ({ title, description, techStack, liveLink, githubLink }) => {
       <p>{description}</p>
       <ul>
         {techStack.map((tech) => (
-          <li>{tech}</li>
+          <li className="skill">{tech}</li>
         ))}
       </ul>
       <div className="links">
@@ -15,13 +15,13 @@ const Project = ({ title, description, techStack, liveLink, githubLink }) => {
           arial-label="github"
           href={githubLink}
           target="_blank"
-	  rel="noreferrer"
+          rel="noreferrer"
         >
           <i className="bi bi-github"></i>
         </a>
-        <a href={liveLink}>
+        {liveLink && <a href={liveLink}>
           <i class="bi bi-box-arrow-in-up-right"></i>
-        </a>
+        </a>}
       </div>
     </div>
   );

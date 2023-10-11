@@ -1,13 +1,27 @@
+:root {
+  --background-color: #101613 ;
+  --footer-color: #15292a;
+  --box-shadow-color: rgba(0, 19, 40, .4);
+  --text-color: #eff1ffdb;
+  --button-color: rgb(18, 19, 26);
+  --hover-color: aquamarine;
+  --border-color: white;
+  --project-background-color: #1C3738;
+  --link-color: aquamarine;
+  --icon-link-color: rgb(245, 245, 245);
+  --border-radius: 30px;
+}
+
 .App {
   text-align: center;
-  background-color: rgb(0, 33, 66);
-  color: #eff1ffdb;
+  background-color: var(--background-color);
+  color: var(--text-color);
   min-height: 100vh;
 }
 
 p {
   margin: auto;
-  width: 50%;
+  width: 90%;
   padding: 20px 30px;
 }
 
@@ -15,14 +29,53 @@ footer {
   width: 100%;
   margin: auto; 
   padding: 4% 0%;
-  background-color: rgb(0, 19, 40);;
+  background-color: var(--footer-color);
+}
+
+footer > a {
+  color: var(--icon-link-color)
 }
 
 button {
   border-radius: 30px;
-  background-color: rgb(18, 19, 26);
-  color: white;
+  background-color: var(--button-color);
   border: none;
   padding: 5px 20px;
   margin: 20px;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--border-color);
+}
+
+nav > a {
+  text-decoration: none;
+  color: inherit
+}
+
+p > a {
+  color: var(--link-color)
+}
+
+.bi {
+  margin: 4px;
+  display: inline-block;
+  padding: 5px;
+  transform: scale(1.5);
+}
+
+.bi:hover {
+  color: var(--hover-color);
+  scale: 1.2;
+}
+
+section {
+  width: 80%;
+  margin: auto;
+  max-width: 1000px;
+  padding: 20px;
 }

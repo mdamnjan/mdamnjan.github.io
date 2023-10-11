@@ -1,36 +1,41 @@
 .projects-list {
     display: flex;
-    flex-direction: column;
+    margin: auto;
     margin-bottom: 40px;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .project-container {
-    width: 50%;
-    background-color: rgb(40, 43, 58);
-    margin: auto;
-    color: rgb(212, 209, 209);
+    background-color: var(--project-background-color);
+    margin: 20px;
     padding: 20px 30px;
     text-align: left;
     display: inline-block;
 }
 
-.project-container > p {
-    width: 100%;
+.project-container {
+    /* border: 2px solid rgb(212, 209, 209); */
+    box-shadow: 12px 12px 2px 1px var(--box-shadow-color);
+    outline: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
 }
 
-.project-container:not(:last-child) {
-    border-bottom: 2px solid rgb(212, 209, 209);;
+.project-container:hover {
+    outline: 4px solid var(--border-color)
 }
 
 li {
     display: inline-block;
-    margin: 5px;   
 }
 
 .links {
     float: right;
 }
 
+a {
+    color: var(--icon-link-color)
+}
 
 
 
