@@ -5,7 +5,7 @@ const Projects = () => {
     <div className="projects-list">
       <Project
         title="My Plant Diary"
-        description="A web app that helps you keep your houseplants alive."
+        description="A web app that helps you keep your houseplants alive. Inspired by my covid-hobby of buying a bunch of plants."
         techStack={["React", "Material UI", "Django", "Django Rest Framework", "PostgreSQL"]}
         githubLink="https://github.com/mdamnjan/my-plant-diary"
       />
