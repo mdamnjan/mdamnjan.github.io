@@ -1,13 +1,13 @@
 :root {
-  --background-color: #101613 ;
-  --footer-color: #15292a;
+  --background-color: #56638A ;
+  --footer-color: #464c80;
   --box-shadow-color: rgba(0, 19, 40, .4);
   --text-color: #eff1ffdb;
-  --button-color: rgb(18, 19, 26);
+  --button-color: rgb(203, 203, 207);
   --hover-color: aquamarine;
   --border-color: white;
-  --project-background-color: #1C3738;
-  --link-color: aquamarine;
+  --project-background-color: #464c80;
+  --link-color: rgb(103, 255, 247);
   --icon-link-color: rgb(245, 245, 245);
   --border-radius: 30px;
 }
@@ -47,9 +47,10 @@ button {
 img {
   height: 200px;
   width: 200px;
-  border-radius: 50%;
+  border-radius: 40px;
   object-fit: cover;
   border: 3px solid var(--border-color);
+  filter: contrast(0.9)
 }
 
 nav > a {
