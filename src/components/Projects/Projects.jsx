@@ -26,7 +26,7 @@ const Projects = () => {
       />
       <Project
         title="Nuit Blanche Scraper"
-        description="A simple scraper that grabs exhibit information from the Toronto 2023 Nuit Blanche website."
+        description="A simple scraper that grabs exhibit information from the Toronto 2023 Nuit Blanche website and preps it to be imported into Google My Maps."
         techStack={["Python", "Selenium"]}
         githubLink="https://github.com/mdamnjan/nuit-blanche-scraper"
         liveLink=""
