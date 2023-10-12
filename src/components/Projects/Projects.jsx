@@ -19,7 +19,7 @@ const Projects = () => {
       />
       <Project
         title="Personal Website"
-        description="That's this website!"
+        description="A website to showcase my portfolio using GitHub Pages. Also the website you're on right now!"
         techStack={["React", "CSS", "GitHub Actions"]}
         githubLink="https://github.com/mdamnjan/mdamnjan.github.io/"
         liveLink="https://mdamnjan.github.io/"

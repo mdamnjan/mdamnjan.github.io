@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     branches: ["main", "gh-actions"]
   push:
-    branches: [ "main", "gh-actions" ]
+    branches: [ "main", "gh-actions", "*theme" ]
   pull_request:
     branches: [ "main", "gh-actions" ]
 

@@ -25,6 +25,11 @@
     outline: 4px solid var(--border-color)
 }
 
+ul {
+    padding: 0;
+    margin-left: 20px
+}
+
 li {
     display: inline-block;
 }

@@ -10,11 +10,11 @@ function App() {
         <NavBar />
       </header>
       <section id="about-me">
-        <img alt="Headshot of Mimi Damnjanovic" src="/profile_pic_edited.jpg" />
+        <img alt="Headshot of Mimi Damnjanovic" src="/profile_pic.jpg" />
         <h1>About Me</h1>
         <p>
           Hi! I'm Mimi, a recent graduate from the University of Toronto, where
-          I completed a computer science specialist and physics minor.
+          I studied Computer Science and Physics.
         </p>
         <p>
           I have 16 months of work experience as a software engineer intern
