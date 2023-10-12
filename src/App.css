@@ -20,9 +20,16 @@
 }
 
 p {
+  font-size: x-large;
   margin: auto;
   width: 90%;
   padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  p {
+    font-size: large;
+  }
 }
 
 footer {

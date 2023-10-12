@@ -1,6 +1,6 @@
 .navbar {
     background-color: var(--footer-color);
-    margin-bottom: 5%;
+    margin-bottom: 50px;
     justify-content: flex-end;
     display: flex;
     padding: 20px;
@@ -18,8 +18,4 @@
 
 .navbar-item:hover {
     text-decoration: underline;
-}
-
-p {
-    font-size: x-large;
 }
