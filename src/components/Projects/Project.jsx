@@ -1,10 +1,11 @@
 import "./projects.css";
 
-const Project = ({ title, description, techStack, liveLink, githubLink }) => {
+const Project = ({ title, description, techStack, liveLink, githubLink, img }) => {
   return (
     <div className="project-container">
       <h1>{title}</h1>
       <p>{description}</p>
+      {img && <img src={img}></img>}
       <ul>
         {techStack.map((tech) => (
           <li className="skill">{tech}</li>

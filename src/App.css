@@ -2,7 +2,7 @@
   --background-color: #56638A ;
   --footer-color: #464c80;
   --box-shadow-color: rgba(0, 19, 40, .4);
-  --text-color: #eff1ffdb;
+  --text-color: white;
   --button-color: rgb(203, 203, 207);
   --hover-color: aquamarine;
   --border-color: white;
@@ -49,9 +49,12 @@ img {
   width: 200px;
   border-radius: 40px;
   object-fit: cover;
-  border: 3px solid var(--border-color);
+  outline: 3px solid var(--border-color);
   filter: contrast(0.8)
 }
+
+img:hover {
+  outline: 5px solid var(--border-color);}
 
 nav > a {
   text-decoration: none;
@@ -80,6 +83,6 @@ section {
   max-width: 1000px;
 }
 
-#about-me > p {
+section > p {
   text-align: left;
 }

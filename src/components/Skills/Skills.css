@@ -20,4 +20,9 @@
   min-height: auto;
   text-align: left;
   border-radius: var(--border-radius);
+  box-shadow: 12px 12px 2px 1px var(--box-shadow-color);
+}
+
+.skills-container:hover {
+    outline: 4px solid var(--border-color);
 }

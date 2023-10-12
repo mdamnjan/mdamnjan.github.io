@@ -13,8 +13,8 @@ function App() {
         <img alt="Headshot of Mimi Damnjanovic" src="/profile_pic.jpg" />
         <h1>About Me</h1>
         <p>
-          Hi! I'm Mimi, a recent graduate from the University of Toronto, where
-          I studied Computer Science and Physics.
+          Hi! I'm Mimi, a recent computer science and physics graduate from the
+          University of Toronto.
         </p>
         <p>
           I have 16 months of work experience as a software engineer intern
@@ -23,13 +23,24 @@ function App() {
           I worked on{" "}
           <a href="https://www.securitycompass.com/sdelements/">SD Elements</a>.
         </p>
+        <p>
+          When I'm not programming I'm most likely playing video games 🎮,
+          guitar 🎸 or <s>fighting my way through another Blender tutorial</s>{" "}
+          learning 3D modeling.
+        </p>
       </section>
       <section id="skills">
         <h1>Skills</h1>
+        <p>
+          These are the technologies I'm most comfortable with at the moment,
+          but I'm always learning! I make an effort to try out new libraries and
+          frameworks in each personal project.
+        </p>
         <Skills />
       </section>
       <section id="projects">
         <h1>Projects</h1>
+        <p>Some projects I've worked on.</p>
         <Projects />
       </section>
       <footer id="contact">
