@@ -9,8 +9,9 @@ const Project = ({ title, description, techStack, liveLink, githubLink }) => {
         <iframe
           title="Google My Maps"
           src="https://www.google.com/maps/d/u/0/embed?mid=14A7B4a7-pqqFu2PgVr7gx8CJ6p1EGdo&ehbc=2E312F"
-          width="540"
-          height="380"
+          height="300"
+          width={"100%"}
+          style={{maxWidth: "500px"}}
         ></iframe>
       )}
       <ul>
