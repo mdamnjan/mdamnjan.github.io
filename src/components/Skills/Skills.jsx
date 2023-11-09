@@ -10,9 +10,10 @@ const Skills = () => {
     "React",
     "HTML",
     "CSS",
-    "Cypress",
     "PostgreSQL",
     "Git",
+    "Cypress",
+    "React Testing Library",
   ];
   return (
       <div className="skills-container">

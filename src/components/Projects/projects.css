@@ -9,7 +9,7 @@
 .project-container {
     background-color: var(--project-background-color);
     margin: 20px;
-    padding: 20px 30px;
+    padding: 20px;
     text-align: left;
     display: inline-block;
 }
@@ -27,10 +27,9 @@
 
 ul {
     padding: 0;
-    margin-left: 20px
 }
 
-li {
+li .skill {
     display: inline-block;
 }
 
@@ -49,5 +48,19 @@ a {
     margin: auto;
 }
 
+.project-description, .project-summary-point {
+    margin: 0;
+    padding-bottom: 0;
+    width: "100%"
+}
 
+.project-description {
+    white-space: pre-line;
+}
+.project-summary-points {
+    margin-left: 20px;
+}
 
+.project-contents {
+    margin: 20px
+}

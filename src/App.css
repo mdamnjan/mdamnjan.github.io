@@ -78,6 +78,10 @@ p > a {
   transform: scale(1.5);
 }
 
+.contacts > a >.bi {
+  margin: 10px
+}
+
 .bi:hover {
   color: var(--hover-color);
   scale: 1.2;

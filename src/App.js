@@ -17,30 +17,28 @@ function App() {
           University of Toronto.
         </p>
         <p>
-          I have 16 months of work experience as a software engineer intern
+          I have ~1.5 years (16 months) of experience as a software engineer intern
           working at{" "}
           <a href="https://www.securitycompass.com/">Security Compass</a> where
           I worked on{" "}
           <a href="https://www.securitycompass.com/sdelements/">SD Elements</a>.
         </p>
         <p>
-          When I'm not programming I'm most likely playing video games 🎮,
-          guitar 🎸 or <s>fighting my way through another Blender tutorial</s>{" "}
-          learning 3D modeling.
+          When I'm not programming I'm most likely playing video games 🎮 or
+          guitar 🎸.
         </p>
       </section>
       <section id="skills">
         <h1>Skills</h1>
         <p>
           These are the technologies I'm most comfortable with at the moment,
-          but I'm always learning! I make an effort to try out new libraries and
-          frameworks in each personal project.
+          but I'm always open to learning/working with new technologies.
         </p>
         <Skills />
       </section>
       <section id="projects">
         <h1>Projects</h1>
-        <p>Some projects I've worked on.</p>
+        <p>Some projects I've worked on outside of school.</p>
         <Projects />
       </section>
       <footer id="contact">

@@ -1,24 +1,37 @@
 import "./projects.css";
 
-const Project = ({ title, description, techStack, liveLink, githubLink }) => {
+const Project = ({
+  title,
+  description,
+  summaryPoints = [],
+  techStack,
+  liveLink,
+  githubLink,
+  images = [],
+  embedded = undefined,
+}) => {
   return (
     <div className="project-container">
-      <h1>{title}</h1>
-      <p>{description}</p>
-      {title === "Nuit Blanche Scraper" && (
-        <iframe
-          title="Google My Maps"
-          src="https://www.google.com/maps/d/u/0/embed?mid=14A7B4a7-pqqFu2PgVr7gx8CJ6p1EGdo&ehbc=2E312F"
-          height="300"
-          width={"100%"}
-          style={{maxWidth: "500px"}}
-        ></iframe>
-      )}
-      <ul>
-        {techStack.map((tech) => (
-          <li className="skill">{tech}</li>
+      <div className="project-contents">
+        <h1>{title}</h1>
+        <p className="project-description">{description}</p>
+        <ul className="project-summary-points">
+          {summaryPoints.map((point) => (
+            <li>
+              <p className="project-summary-point">{point}</p>
+            </li>
+          ))}
+        </ul>
+        {embedded}
+        {images.map((img) => (
+          <img alt={img.alt} src={img.src}></img>
         ))}
-      </ul>
+        <ul>
+          {techStack.map((tech) => (
+            <li className="skill">{tech}</li>
+          ))}
+        </ul>
+      </div>
       <div className="links">
         <a
           arial-label="github"
@@ -29,7 +42,7 @@ const Project = ({ title, description, techStack, liveLink, githubLink }) => {
           <i className="bi bi-github"></i>
         </a>
         {liveLink && (
-          <a href={liveLink}>
+          <a href={liveLink} target="_blank" rel="noreferrer">
             <i class="bi bi-box-arrow-in-up-right"></i>
           </a>
         )}
