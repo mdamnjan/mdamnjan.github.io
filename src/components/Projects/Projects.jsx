@@ -5,7 +5,7 @@ const Projects = () => {
     <div className="projects-list">
       <Project
         title="My Plant Diary"
-        description={`A full-stack web app that helps you keep your houseplants alive build with React, Django and PostgreSQL.`}
+        description={`A full-stack web app that helps you keep your houseplants alive built with React, Django and PostgreSQL.`}
         summaryPoints={[
           "Lets you schedule plant care tasks (e.g. watering, repotting, pruning), take notes and make progress updates",
           "Uses Firebase Cloud Storage to allow image uploads",
