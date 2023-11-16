@@ -1,15 +1,32 @@
 ---
-
+import {
+  Astronav,
+  MenuItems,
+  MenuIcon,
+  StickyHeader,
+} from "astro-navbar";
 ---
 
-<header class="bg-acquamarine h-[40px] block sticky top-0 p-[10px]">
-  <nav>
-    <ul class="flex gap-6 float-right">
-      <li><a href="#about-me" class="text-sm font-medium">About</a></li>
-      <li><a href="#experience" class="text-sm font-medium">Experience</a></li>
-      <li><a href="#skills" class="text-sm font-medium">Skills</a></li>
-      <li><a href="#projects" class="text-sm font-medium">Projects</a></li>
-      <li><a href="#contact" class="text-sm font-medium">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<StickyHeader
+  class="sticky top-0 border-none z-20 transition-all bg-teal-500"
+  scrollY={50}
+  defaultClass="py-5 border-transparent"
+  activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg"
+>
+  <Astronav closeOnClick>
+    <div class="flex w-full justify-end">
+      <div class="block lg:hidden">
+        <MenuIcon class="w-4 h-4 text-gray-800 mr-[10px]" />
+      </div>
+    </div>
+    <MenuItems class="hidden lg:flex justify-end ml-[10px] mr-[10px]">
+      <ul class="flex flex-col lg:flex-row lg:gap-5">
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </MenuItems>
+  </Astronav>
+</StickyHeader>

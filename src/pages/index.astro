@@ -9,10 +9,10 @@ import { Icon } from "astro-icon";
 <Layout title="Mimi Damnjanovic">
   <NavBar />
   <main>
-    <section class="mt-[100px] flex items-center">
-      <h1>
-        Hi I'm Mimi, welcome to <span class="text-gradient">my website!</span>
-      </h1>
+    <section class="mt-[100px] flex items-start justify-center flex-col">
+      <h2>Hi, I'm Mimi.</h2>
+      <h3>I like building software 🔨</h3>
+      <h1>Welcome to <span class="text-gradient">my website!</span></h1>
     </section>
     <section id="about-me">
       <h2>About me</h2>
@@ -27,8 +27,8 @@ import { Icon } from "astro-icon";
             University of Toronto.
           </p>
           <p class="inline-block mb-5">
-            I have ~1.5 years (16 months) of experience as a software engineer
-            intern working at
+            I have a little over 1 year (16 months) of experience as a software
+            engineer intern working at
             <a href="https://www.securitycompass.com/">Security Compass</a>
              where I worked on
             <a href="https://www.securitycompass.com/sdelements/">SD Elements</a
@@ -36,10 +36,44 @@ import { Icon } from "astro-icon";
           </p>
           <p class="inline-block">
             Outside of programming and work I like to play video games 🎮 (ask
-            me about farming sims),
+            me about farming sims) and learn new songs on the guitar 🎸
           </p>
         </div>
       </div>
+    </section>
+    <section id="education">
+      <h2 class="mt-20">Education</h2>
+      <h3 class="font-semibold text-2xl">University of Toronto</h3>
+      <h4 class="italic">
+        Bachelor's of science (BSc) - specialist in Computer Science, minor in
+        Physics
+      </h4>
+      <span class="text-sm">2017-2023</span>
+      <ul>
+        <h3>Coursework</h3>
+        <li class="text-smaller list-disc ml-[20px] font-light">
+          Algorithm Design and Analysis, Data Structures and Analysis, Software
+          Design, Software Systems and Tools Programming, Operating Systems,
+          Intro to Databases, Intro to AI, Intro to Machine Learning, Intro to
+          Neural Networks
+        </li>
+      </ul>
+      <ul>
+        <h3>Extracurriculars</h3>
+        <div class="ml-[20px]">
+          <h4>
+            Bioinformatics and Computational Biology Student Union (BCBSU)
+          </h4>
+          <ul>
+            <li class="text-smaller list-disc ml-[20px] font-light">
+              Executive team member (events director) 2019-2020
+            </li>
+            <li class="text-smaller list-disc ml-[20px] font-light">
+              BioHacks hackathon mentor 2021
+            </li>
+          </ul>
+        </div>
+      </ul>
     </section>
     <section id="experience">
       <h2 class="mt-20">Experience</h2>
@@ -48,17 +82,28 @@ import { Icon } from "astro-icon";
       <span class="text-sm">May 2020-Aug 2021 (16 months)</span>
       <ul>
         <li class="text-md list-disc ml-[20px]">
-          Built an analytics dashboard using Cube, React, Recharts and
-          PostgreSQL
+          Worked on the Reporting team of <a
+            href="https://www.securitycompass.com/sdelements/">SD Elements</a
+          > with other developers, designers, product managers and QA to build
+          and maintain reporting features
         </li>
         <li class="text-md list-disc ml-[20px]">
-          Wrote automated CI/CD end-to-end tests using Cypress
+          Built an analytics dashboard using Cube, React, Recharts and
+          PostgreSQL, allowing users to gain insight into the overall state of
+          their product's security
+        </li>
+        <li class="text-md list-disc ml-[20px]">
+          Created RESTful API endpoints using Django Rest Framework
+        </li>
+        <li class="text-md list-disc ml-[20px]">
+          Built out a suite of automated CI/CD end-to-end tests using Cypress
+          and Cucumber, reducing regression testing time
         </li>
       </ul>
     </section>
     <section id="skills">
       <h2 class="mt-20">Skills</h2>
-      <p class="mb-[10px]">The skills that I'm most comfortable with.</p>
+      <p class="mb-[10px]">The technologies that I'm most comfortable with.</p>
       <h3>Languages:</h3>
       <ul class="mt-[10px] mb-[10px] inline-block">
         {
@@ -94,6 +139,7 @@ import { Icon } from "astro-icon";
     </section>
     <section id="projects">
       <h2 class="mt-20">Projects</h2>
+      <p class="mb-[10px]">Some projects I've worked on.</p>
       <ul role="list" class="link-card-grid">
         <ProjectCard
           title="My Plant Diary"
@@ -132,14 +178,19 @@ import { Icon } from "astro-icon";
         />
         <ProjectCard
           title="Personal Website"
-          description="The website you're on right now! I recently rebuilt it using Astro.js 🚀. It automatically deploys to GitHub Pages when I push any changes thanks to GitHub Actions."
-          techStack={["Astro.js", "CSS", "GitHub Actions", "GitHub Pages"]}
+          description="The website you're on right now! I recently rebuilt it using Astro.js 🚀 and Tailwind CSS.\n It automatically deploys to GitHub Pages when I push any changes thanks to GitHub Actions."
+          techStack={[
+            "Astro.js",
+            "Tailwind CSS",
+            "GitHub Actions",
+            "GitHub Pages",
+          ]}
           githubLink="https://github.com/mdamnjan/mdamnjan.github.io/"
           liveLink="https://mdamnjan.github.io/"
         />
         <ProjectCard
           title="Nuit Blanche Scraper"
-          description={"A Python/Selenium scraper that grabs exhibit information from the Toronto 2023 Nuit Blanche website and preps it to be imported into Google My Maps.\n\nI used it to generate the map below (click on an icon to see get the exhibit's details and directions):"}
+          description={"A Python/Selenium scraper that grabs exhibit information from the Toronto 2023 Nuit Blanche website and preps it to be imported into Google My Maps.\n\n I used it to generate the map below (click on an icon to see get the exhibit's details and directions):"}
           techStack={["Python", "Selenium"]}
           githubLink="https://github.com/mdamnjan/nuit-blanche-scraper"
         />
@@ -153,8 +204,7 @@ import { Icon } from "astro-icon";
     </section>
     <section class="mt-[40px]" id="contact">
       <h2>Contact</h2>
-       Feel free to reach out through any of the following methods, I'm always
-      open to chat!
+       Feel free to reach out, I'm always open to chat!
       <div
         class="flex items-center justify-around max-[500px] mr-auto mt-10 mb-20"
       >
@@ -204,6 +254,9 @@ import { Icon } from "astro-icon";
 </Layout>
 
 <style>
+  .hidden {
+    display: none;
+  }
   :target {
     scroll-margin-top: 100px;
   }
