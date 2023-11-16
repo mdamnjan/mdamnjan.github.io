@@ -36,21 +36,29 @@ const {
   <ul class="mt-[20px]">
     {
       techStack.map((stack) => {
-        return <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">{stack}</li>;
+        return (
+          <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
+            {stack}
+          </li>
+        );
       })
     }
   </ul>
   <div>
-    <a
-      class="float-right ml-3"
-      arial-label="github link"
-      href={githubLink}
-      target="_blank"
-      rel="noreferrer"
-    >
-      <Icon height="24px" width="24px" pack="mdi" name="github" />
-    </a>
-    <a
+    {
+      githubLink && (
+        <a
+          class="float-right ml-3"
+          arial-label="github link"
+          href={githubLink}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Icon height="24px" width="24px" pack="mdi" name="github" />
+        </a>
+      )
+    }
+    {liveLink && (<a
       class="float-right"
       arial-label="live link"
       href={liveLink}
@@ -58,7 +66,7 @@ const {
       rel="noreferrer"
     >
       <Icon height="24px" width="24px" pack="bi" name="box-arrow-up-right" />
-    </a>
+    </a>)}
   </div>
 </li>
 
@@ -100,9 +108,6 @@ const {
   }
   .link-card:is(:hover, :focus-within) {
     background-position: 0;
-    background-image: var(--accent-gradient);
-  }
-  .link-card:is(:hover, :focus-within) h2 {
-    color: rgb(var(--accent-light));
+    background-color: rgba(15, 104, 97, 0.517);
   }
 </style>

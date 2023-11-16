@@ -7,10 +7,12 @@ import { Icon } from "astro-icon";
 ---
 
 <Layout title="Mimi Damnjanovic">
+  <NavBar />
   <main>
-    <NavBar />
-    <section class="mt-[100px]">
-      <h1>Hi I'm Mimi, welcome to <span class="text-gradient">my website!</span></h1>
+    <section class="mt-[100px] flex items-center">
+      <h1>
+        Hi I'm Mimi, welcome to <span class="text-gradient">my website!</span>
+      </h1>
     </section>
     <section id="about-me">
       <h2>About me</h2>
@@ -33,7 +35,8 @@ import { Icon } from "astro-icon";
             >.
           </p>
           <p class="inline-block">
-            Outside of programming and work I like to play video games 🎮 (ask me about farming sims), 
+            Outside of programming and work I like to play video games 🎮 (ask
+            me about farming sims),
           </p>
         </div>
       </div>
@@ -195,12 +198,15 @@ import { Icon } from "astro-icon";
       </div>
     </section>
     <p class="text-center font-thin text-sm">
-      Made with ❤️ by Mimi Damnjanovic
+      Made with <span class="animate-pulse">❤️</span> by Mimi Damnjanovic
     </p>
   </main>
 </Layout>
 
 <style>
+  :target {
+    scroll-margin-top: 100px;
+  }
   main {
     margin: auto;
     padding: 1rem;
@@ -212,7 +218,7 @@ import { Icon } from "astro-icon";
   }
 
   section:first-of-type {
-    min-height: calc(100vh - 130px);
+    min-height: calc(100vh - 120px);
     margin: 30px auto;
   }
   a {
