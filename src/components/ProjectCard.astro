@@ -55,24 +55,24 @@ const {
       })
     }
   </ul>
-  <div>
+  <div class="self-end mt-[10px]">
     {
       githubLink && (
         <a
-          class="float-right ml-3"
+          class="inline-block"
           arial-label="github link"
           href={githubLink}
           target="_blank"
           rel="noreferrer"
         >
-          <Icon height="24px" width="24px" pack="mdi" name="github" />
+          <Icon class="mb-[-1px]" height="24px" width="24px" pack="mdi" name="github" />
         </a>
       )
     }
     {
       liveLink && (
         <a
-          class="float-right"
+          class="inline-block ml-[4px]"
           arial-label="live link"
           href={liveLink}
           target="_blank"
@@ -129,6 +129,6 @@ const {
   .link-card:is(:hover, :focus-within) {
     background-position: 0;
     background-color: rgb(0 95 93 / 75%);
-    outline: 2px solid aquamarine
+    outline: 2px solid aquamarine;
   }
 </style>
