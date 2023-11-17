@@ -11,7 +11,7 @@ import { Icon } from "astro-icon";
   <main>
     <section class="mt-[100px] flex items-start justify-center flex-col">
       <h2>Hi, I'm Mimi.</h2>
-      <h1>Welcome to <span class="text-gradient">my website!</span></h1>
+      <h1>Welcome to my website!</h1>
     </section>
 	<hr/>
     <section id="about-me">
@@ -43,7 +43,7 @@ import { Icon } from "astro-icon";
     </section>
 	<hr/>
     <section id="education">
-      <h2 class="mt-20">Education</h2>
+      <h2 class="mt-[20px]">Education</h2>
       <h3 class="font-semibold text-2xl">University of Toronto</h3>
       <h4 class="italic">
         Bachelor's of science (BSc) - specialist in Computer Science, minor in
@@ -78,7 +78,7 @@ import { Icon } from "astro-icon";
     </section>
 	<hr/>
     <section id="experience">
-      <h2 class="mt-20">Experience</h2>
+      <h2 class="mt-[20px]">Experience</h2>
       <h3 class="font-semibold text-2xl">
         Software Engineer Intern @ Security Compass
       </h3>
@@ -106,7 +106,7 @@ import { Icon } from "astro-icon";
     </section>
 	<hr/>
     <section id="skills">
-      <h2 class="mt-20">Skills</h2>
+      <h2 class="mt-[20px]">Skills</h2>
       <p class="mb-[10px]">The technologies that I'm most comfortable with.</p>
       <h3>Languages:</h3>
       <ul class="mt-[10px] mb-[10px] inline-block">
@@ -143,7 +143,7 @@ import { Icon } from "astro-icon";
     </section>
 	<hr/>
     <section id="projects">
-      <h2 class="mt-20">Projects</h2>
+      <h2 class="mt-[20px]">Projects</h2>
       <p class="mb-[10px]">Some projects I've worked on.</p>
       <ul role="list" class="link-card-grid">
         <ProjectCard
@@ -267,7 +267,7 @@ import { Icon } from "astro-icon";
   main {
     margin: auto;
     padding: 1rem;
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
     max-width: 1100px;
     color: white;
     font-size: 20px;
@@ -275,7 +275,7 @@ import { Icon } from "astro-icon";
   }
 
   section:first-of-type {
-    min-height: calc(100vh - 70px);
+    min-height: 100vh;
     margin: auto;
   }
   a {
