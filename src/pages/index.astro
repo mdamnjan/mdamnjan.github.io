@@ -9,39 +9,42 @@ import { Icon } from "astro-icon";
 <Layout title="Mimi Damnjanovic">
   <NavBar />
   <main>
-    <section class="mt-[100px] flex items-start justify-center flex-col">
-      <h2>Hi, I'm Mimi.</h2>
-      <h1>Welcome to my website!</h1>
+    <section>
+      <h2 class="">Hi there 👋, I'm Mimi</h2>
+      <h2 class="text-2xl">Welcome to my website!</h2>
     </section>
-	<hr/>
+    <hr />
     <section id="about-me">
       <h2>About me</h2>
       <div class="flex items-start gap-10 flex-wrap">
         <img
-          class="h-[200px] w-[200px] inline-block object-cover rounded-lg border-solid border-4 border-teal-200"
-          src="profile_pic.png"
+          class="h-[200px] w-[200px] inline-block object-cover rounded-lg border-solid border-4 border-teal-300"
+          src="profile_pic2.png"
         />
         <div>
           <p class="inline-block mb-5">
-            I'm a recent computer science and physics graduate from the
-            University of Toronto.
+            I am a recent computer science and physics graduate based in Toronto
+            looking for exciting new software engineering/development
+            opportunities.
           </p>
           <p class="inline-block mb-5">
-            I have a little over 1 year (16 months) of experience as a software
-            engineer intern working at
+            I have a little over 1 year (16 months) of full-stack experience
+            working as a software engineer intern at
             <a href="https://www.securitycompass.com/">Security Compass</a>
-             where I worked on
+             on the Reporting team for
             <a href="https://www.securitycompass.com/sdelements/">SD Elements</a
-            >.
+            >. I primarily worked with TypeScript, React.js, Django, Cube, and
+            PostgreSQL.
           </p>
           <p class="inline-block">
-            Outside of programming and work I like to play video games 🎮 (ask
-            me about farming sims) and learn new songs on the guitar 🎸
+            Outside of programming I like to play video games 🎮 (recently:
+            Katamari Reroll, Harvest Moon, Valheim, Pokemon Scarlet), learn new
+            languages, and play guitar 🎸
           </p>
         </div>
       </div>
     </section>
-	<hr/>
+    <hr />
     <section id="education">
       <h2 class="mt-[20px]">Education</h2>
       <h3 class="font-semibold text-2xl">University of Toronto</h3>
@@ -66,17 +69,17 @@ import { Icon } from "astro-icon";
             Bioinformatics and Computational Biology Student Union (BCBSU)
           </h4>
           <ul>
-            <li class="text-base list-disc ml-[20px] ">
+            <li class="text-base list-disc ml-[20px]">
               Executive team member (events director) 2019-2020
             </li>
-            <li class="text-base list-disc ml-[20px] ">
+            <li class="text-base list-disc ml-[20px]">
               BioHacks hackathon mentor 2021
             </li>
           </ul>
         </div>
       </ul>
     </section>
-	<hr/>
+    <hr />
     <section id="experience">
       <h2 class="mt-[20px]">Experience</h2>
       <h3 class="font-semibold text-2xl">
@@ -85,18 +88,19 @@ import { Icon } from "astro-icon";
       <span class="text-sm">May 2020-Aug 2021 (16 months)</span>
       <ul>
         <li class="text-xl list-disc m-[15px]">
-          Worked on the Reporting team of <a
+          Worked a scrum team with other developers, designers, product
+          managers and QA to build and maintain reporting features for <a
             href="https://www.securitycompass.com/sdelements/">SD Elements</a
-          > with other developers, designers, product managers and QA to build
-          and maintain reporting features
+          >
         </li>
         <li class="text-xl list-disc m-[15px]">
-          Built an analytics dashboard using Cube, React, Recharts and
-          PostgreSQL, allowing users to gain insight into the overall state of
-          their product's security
+          Built an analytics dashboard using Cube, React, TypeScript, Recharts
+          and PostgreSQL, allowing users to gain insight into the overall state
+          of their product's security
         </li>
         <li class="text-xl list-disc m-[15px]">
-          Created RESTful API endpoints using Django Rest Framework
+          Created API endpoints for aggregate metrics using Django Rest
+          Framework and Cube
         </li>
         <li class="text-xl list-disc m-[15px]">
           Built out a suite of automated CI/CD end-to-end tests using Cypress
@@ -104,10 +108,12 @@ import { Icon } from "astro-icon";
         </li>
       </ul>
     </section>
-	<hr/>
+    <hr />
     <section id="skills">
       <h2 class="mt-[20px]">Skills</h2>
-      <p class="mb-[10px]">The technologies that I'm most comfortable with.</p>
+      <p class="mb-[10px]">
+        The technologies that I'm most comfortable with at the moment.
+      </p>
       <h3>Languages:</h3>
       <ul class="mt-[10px] mb-[10px] inline-block">
         {
@@ -121,7 +127,7 @@ import { Icon } from "astro-icon";
         }
       </ul>
       <h3>Frameworks/Libraries:</h3>
-      <ul class="mt-[10px] inline-block">
+      <ul class="mt-[10px] mb-[10px] inline-block">
         {
           [
             "Django/Django Rest Framework",
@@ -140,8 +146,20 @@ import { Icon } from "astro-icon";
           })
         }
       </ul>
+      <h3>Database Technologies:</h3>
+      <ul class="mt-[10px] inline-block">
+        {
+          ["PostgreSQL", "Cube", "Prisma"].map((stack) => {
+            return (
+              <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
+                {stack}
+              </li>
+            );
+          })
+        }
+      </ul>
     </section>
-	<hr/>
+    <hr />
     <section id="projects">
       <h2 class="mt-[20px]">Projects</h2>
       <p class="mb-[10px]">Some projects I've worked on.</p>
@@ -168,7 +186,7 @@ import { Icon } from "astro-icon";
           title="GitHub Stats Viewer"
           description="A web app that lets you see cool stats related to a GitHub user's account or repository."
           summaryPoints={[
-            "Uses GitHub Oauth to allow users to include their private repositories in the calculated stats",
+            "Has a sign in with GitHub Oauth option to allow users to include their private repositories in the calculated stats",
           ]}
           techStack={[
             "React",
@@ -183,7 +201,7 @@ import { Icon } from "astro-icon";
         />
         <ProjectCard
           title="Personal Website"
-          description="The website you're on right now! I recently rebuilt it using Astro.js 🚀 and Tailwind CSS.\n It automatically deploys to GitHub Pages when I push any changes thanks to GitHub Actions."
+          description="The website you're on right now! I recently rebuilt it using Astro.js 🚀 and Tailwind CSS.\n It automatically deploys to GitHub Pages when I push any changes to my repository thanks to GitHub Actions."
           techStack={[
             "Astro.js",
             "Tailwind CSS",
@@ -201,13 +219,13 @@ import { Icon } from "astro-icon";
         />
         <ProjectCard
           title="@sdelements/flan"
-          description="A CLI tool I helped build during my time at Security Compass that leverages Git to allow easy and efficient sharing and loading of Postgres instances."
+          description="A handy CLI tool I helped build during my time at Security Compass that leverages Git to allow easy and efficient sharing/loading of Postgres instances."
           techStack={["Typescript", "Oclif"]}
           githubLink="https://github.com/sdelements/flan"
         />
       </ul>
     </section>
-	<hr/>
+    <hr />
     <section class="mt-[40px]" id="contact">
       <h2>Contact</h2>
        Feel free to reach out, I'm always open to chat!
@@ -253,16 +271,13 @@ import { Icon } from "astro-icon";
 </Layout>
 
 <style>
-  .hidden {
-    display: none;
-  }
   :target {
     scroll-margin-top: 100px;
   }
 
   section {
-	margin-top: 50px;
-	margin-bottom: 50px
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   main {
     margin: auto;
@@ -274,10 +289,6 @@ import { Icon } from "astro-icon";
     line-height: 1.6;
   }
 
-  section:first-of-type {
-    min-height: 100vh;
-    margin: auto;
-  }
   a {
     color: aquamarine;
     text-decoration: underline;
