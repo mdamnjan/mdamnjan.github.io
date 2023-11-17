@@ -1,26 +1,22 @@
 ---
-import {
-  Astronav,
-  MenuItems,
-  MenuIcon,
-  StickyHeader,
-} from "astro-navbar";
+import { Astronav, MenuItems, MenuIcon, StickyHeader } from "astro-navbar";
 ---
 
 <StickyHeader
-  class="sticky top-0 border-none z-20 transition-all bg-teal-500"
+  class="sticky -webkit-sticky top-0 border-none z-20 transition-all bg-teal-500"
   scrollY={50}
-  defaultClass="py-5 border-transparent"
-  activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg"
+  defaultClass="border-transparent"
+  activeClass="border-gray-200 backdrop-blur-lg"
 >
   <Astronav closeOnClick>
     <div class="flex w-full justify-end">
-      <div class="block lg:hidden">
+      <div class="block md:hidden z-1 p-[20px]">
         <MenuIcon class="w-4 h-4 text-gray-800 mr-[10px]" />
       </div>
     </div>
-    <MenuItems class="hidden lg:flex justify-end ml-[10px] mr-[10px]">
-      <ul class="flex flex-col lg:flex-row lg:gap-5">
+    <MenuItems class="hidden md:flex justify-end absolute bg-teal-500 w-screen">
+      <hr />
+      <ul class="flex flex-col md:flex-row md:gap-5 ml-[10px] mr-[10px]">
         <li><a href="#about-me">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>

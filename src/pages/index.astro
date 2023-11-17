@@ -11,9 +11,9 @@ import { Icon } from "astro-icon";
   <main>
     <section class="mt-[100px] flex items-start justify-center flex-col">
       <h2>Hi, I'm Mimi.</h2>
-      <h3>I like building software 🔨</h3>
       <h1>Welcome to <span class="text-gradient">my website!</span></h1>
     </section>
+	<hr/>
     <section id="about-me">
       <h2>About me</h2>
       <div class="flex items-start gap-10 flex-wrap">
@@ -41,6 +41,7 @@ import { Icon } from "astro-icon";
         </div>
       </div>
     </section>
+	<hr/>
     <section id="education">
       <h2 class="mt-20">Education</h2>
       <h3 class="font-semibold text-2xl">University of Toronto</h3>
@@ -75,32 +76,35 @@ import { Icon } from "astro-icon";
         </div>
       </ul>
     </section>
+	<hr/>
     <section id="experience">
       <h2 class="mt-20">Experience</h2>
-      <h3 class="font-semibold text-2xl">Security Compass</h3>
-      <h4 class="italic">Software Engineer Intern</h4>
+      <h3 class="font-semibold text-2xl">
+        Software Engineer Intern @ Security Compass
+      </h3>
       <span class="text-sm">May 2020-Aug 2021 (16 months)</span>
       <ul>
-        <li class="text-md list-disc ml-[20px]">
+        <li class="text-md list-disc m-[15px]">
           Worked on the Reporting team of <a
             href="https://www.securitycompass.com/sdelements/">SD Elements</a
           > with other developers, designers, product managers and QA to build
           and maintain reporting features
         </li>
-        <li class="text-md list-disc ml-[20px]">
+        <li class="text-md list-disc m-[15px]">
           Built an analytics dashboard using Cube, React, Recharts and
           PostgreSQL, allowing users to gain insight into the overall state of
           their product's security
         </li>
-        <li class="text-md list-disc ml-[20px]">
+        <li class="text-md list-disc m-[15px]">
           Created RESTful API endpoints using Django Rest Framework
         </li>
-        <li class="text-md list-disc ml-[20px]">
+        <li class="text-md list-disc m-[15px]">
           Built out a suite of automated CI/CD end-to-end tests using Cypress
           and Cucumber, reducing regression testing time
         </li>
       </ul>
     </section>
+	<hr/>
     <section id="skills">
       <h2 class="mt-20">Skills</h2>
       <p class="mb-[10px]">The technologies that I'm most comfortable with.</p>
@@ -137,6 +141,7 @@ import { Icon } from "astro-icon";
         }
       </ul>
     </section>
+	<hr/>
     <section id="projects">
       <h2 class="mt-20">Projects</h2>
       <p class="mb-[10px]">Some projects I've worked on.</p>
@@ -202,27 +207,22 @@ import { Icon } from "astro-icon";
         />
       </ul>
     </section>
+	<hr/>
     <section class="mt-[40px]" id="contact">
       <h2>Contact</h2>
        Feel free to reach out, I'm always open to chat!
       <div
         class="flex items-center justify-around max-[500px] mr-auto mt-10 mb-20"
       >
-        <span class="inline-block align-middle" html-for="email"
+        <span class="flex items-center gap-[5px]" html-for="email"
           >Email:
-          <a
-            class="inline-block align-middle"
-            id="email"
-            aria-label="email"
-            href="mailto:midamnjan@gmail.com"
-          >
+          <a id="email" aria-label="email" href="mailto:midamnjan@gmail.com">
             <Icon height="24px" width="24px" pack="mdi" name="envelope" />
           </a>
         </span>
-        <span class="inline-block align-middle" html-for="github"
+        <span class="flex items-center gap-[5px]" html-for="github"
           >GitHub:
           <a
-            class="inline-block align-middle"
             id="github"
             arial-label="github"
             href="https://github.com/mdamnjan"
@@ -232,10 +232,9 @@ import { Icon } from "astro-icon";
             <Icon height="24px" width="24px" pack="mdi" name="github" />
           </a>
         </span>
-        <span class="inline-block align-middle" html-for="linkedin"
+        <span class="flex items-center gap-[5px]" html-for="linkedin"
           >LinkedIn:
           <a
-            class="inline-block align-middle"
             id="linkedin"
             aria-label="linkedin"
             href="https://ca.linkedin.com/in/mimi-damnjanovic"
@@ -260,10 +259,15 @@ import { Icon } from "astro-icon";
   :target {
     scroll-margin-top: 100px;
   }
+
+  section {
+	margin-top: 50px;
+	margin-bottom: 50px
+  }
   main {
     margin: auto;
     padding: 1rem;
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
     max-width: 1100px;
     color: white;
     font-size: 20px;
@@ -271,7 +275,7 @@ import { Icon } from "astro-icon";
   }
 
   section:first-of-type {
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 70px);
     margin: 30px auto;
   }
   a {
