@@ -23,18 +23,24 @@ import { Icon } from "astro-icon";
         />
         <div>
           <p class="inline-block mb-5">
-            I am a recent computer science and physics graduate
-            looking for exciting new software engineering/development
-            opportunities.
+            I am a recent computer science and physics graduate looking for
+            exciting new software engineering/development opportunities.
           </p>
           <p class="inline-block mb-5">
             I have a little over 1 year (16 months) of full-stack experience
             working as a software engineer intern at
-            <a href="https://www.securitycompass.com/">Security Compass</a>
+            <a
+              href="https://www.securitycompass.com/"
+              target="_blank"
+              rel="noreferrer">Security Compass</a
+            >
              on the Reporting team for
-            <a href="https://www.securitycompass.com/sdelements/">SD Elements</a
-            >. I primarily worked with TypeScript, React.js, Django, Cube, and
-            PostgreSQL.
+            <a
+              href="https://www.securitycompass.com/sdelements/"
+              target="_blank"
+              rel="noreferrer">SD Elements</a
+            >. I primarily worked with TypeScript, React, Django, Cube, and
+            PostgreSQL during my time there.
           </p>
           <p class="inline-block">
             Outside of programming I like to play video games 🎮 (recently:
@@ -88,23 +94,27 @@ import { Icon } from "astro-icon";
       <span class="text-sm">May 2020-Aug 2021 (16 months)</span>
       <ul>
         <li class="text-xl list-disc m-[15px]">
-          Worked a scrum team with other developers, designers, product
-          managers and QA to build and maintain reporting features for <a
-            href="https://www.securitycompass.com/sdelements/">SD Elements</a
-          >
+          Worked a scrum team with other developers, designers, product managers
+          and QA to build and maintain reporting/analytics functionalities for <a
+            href="https://www.securitycompass.com/sdelements/"
+            target="_blank"
+            rel="noreferrer">SD Elements</a
+          >, following agile methodologies
         </li>
         <li class="text-xl list-disc m-[15px]">
-          Built an analytics dashboard using Cube, React, TypeScript, Recharts
-          and PostgreSQL, allowing users to gain insight into the overall state
-          of their product's security
+          Developed reporting API endpoints using Django Rest Framework, Cube and
+          PostgreSQL used by clients as well as internally to power
+          application-wide reporting
         </li>
         <li class="text-xl list-disc m-[15px]">
-          Created API endpoints for aggregate metrics using Django Rest
-          Framework and Cube
+          Created an analytics dashboard builder using React, Typescript, Cube
+          and Django REST Framework, allowing users to create custom dashboards
+          and widgets to visualize the security health of their applications in
+          a digestible format
         </li>
         <li class="text-xl list-disc m-[15px]">
           Built out a suite of automated CI/CD end-to-end tests using Cypress
-          and Cucumber, reducing regression testing time
+          and Cucumber, greatly reducing regression testing time per release
         </li>
       </ul>
     </section>
@@ -131,12 +141,17 @@ import { Icon } from "astro-icon";
         {
           [
             "Django/Django Rest Framework",
-            "React.js",
             "Express.js",
-            "Node",
+            "Node.js",
+            "React",
             "Next.js",
             "Tailwind CSS",
+            "Recharts",
+            "Chart.js",
             "Cypress",
+			"Cucumber",
+            "React Testing Library",
+            "Jest",
           ].map((stack) => {
             return (
               <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
@@ -192,8 +207,8 @@ import { Icon } from "astro-icon";
             "React",
             "Chart.js",
             "Bootstrap",
-            "Node",
-            "Express",
+            "Node.js",
+            "Express.js",
             "GitHub API",
           ]}
           githubLink="https://github.com/mdamnjan/gh-stats-viewer"
@@ -201,9 +216,9 @@ import { Icon } from "astro-icon";
         />
         <ProjectCard
           title="Personal Website"
-          description="The website you're on right now! I recently rebuilt it using Astro.js 🚀 and Tailwind CSS.\n It automatically deploys to GitHub Pages when I push any changes to my repository thanks to GitHub Actions."
+          description="The website you're on right now! I recently rebuilt it using Astro.js 🚀 and Tailwind CSS.\n I used GitHub Actions to set up automatic deployment to GitHub Pages anytime I push any changes to my repository."
           techStack={[
-            "Astro.js",
+            "Astro",
             "Tailwind CSS",
             "GitHub Actions",
             "GitHub Pages",
@@ -228,13 +243,19 @@ import { Icon } from "astro-icon";
     <hr />
     <section class="mt-[40px]" id="contact">
       <h2>Contact</h2>
-       Feel free to reach out, I'm always open to chat!
+       Feel free to reach out/connect with me, I'm always open to chat!
       <div
         class="flex items-center justify-around max-[500px] mr-auto mt-10 mb-20"
       >
         <span class="flex items-center gap-[5px]" html-for="email"
           >Email:
-          <a id="email" aria-label="email" href="mailto:midamnjan@gmail.com">
+          <a
+            id="email"
+            aria-label="email"
+            href="mailto:midamnjan@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Icon height="24px" width="24px" pack="mdi" name="envelope" />
           </a>
         </span>
