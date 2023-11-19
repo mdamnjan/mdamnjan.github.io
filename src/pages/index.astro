@@ -1,20 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
-import NavBar from "../components/NavBar.astro";
 
 import { Icon } from "astro-icon";
 ---
 
-<Layout title="Mimi Damnjanovic">
-  <NavBar />
-  <main>
-    <section>
+<BaseLayout title="Mimi Damnjanovic">
+    <section slot="intro">
       <h2 class="">Hi there 👋, I'm Mimi</h2>
       <h2 class="text-2xl">Welcome to my website!</h2>
     </section>
-    <hr />
-    <section id="about-me">
+    <section id="about-me" slot="about-me">
       <h2>About me</h2>
       <div class="flex items-start gap-10 flex-wrap">
         <img
@@ -50,8 +46,7 @@ import { Icon } from "astro-icon";
         </div>
       </div>
     </section>
-    <hr />
-    <section id="education">
+    <section id="education" slot="education">
       <h2 class="mt-[20px]">Education</h2>
       <h3 class="font-semibold text-2xl">University of Toronto</h3>
       <h4 class="italic">
@@ -85,8 +80,7 @@ import { Icon } from "astro-icon";
         </div>
       </ul>
     </section>
-    <hr />
-    <section id="experience">
+    <section id="experience" slot="experience">
       <h2 class="mt-[20px]">Experience</h2>
       <h3 class="font-semibold text-2xl">
         Software Engineer Intern @ Security Compass
@@ -119,7 +113,7 @@ import { Icon } from "astro-icon";
       </ul>
     </section>
     <hr />
-    <section id="skills">
+    <section id="skills" slot="skills">
       <h2 class="mt-[20px]">Skills</h2>
       <p class="mb-[10px]">
         The technologies that I'm most comfortable with at the moment.
@@ -175,7 +169,7 @@ import { Icon } from "astro-icon";
       </ul>
     </section>
     <hr />
-    <section id="projects">
+    <section id="projects" slot="skills">
       <h2 class="mt-[20px]">Projects</h2>
       <p class="mb-[10px]">Some projects I've worked on.</p>
       <ul role="list" class="link-card-grid">
@@ -241,7 +235,7 @@ import { Icon } from "astro-icon";
       </ul>
     </section>
     <hr />
-    <section class="mt-[40px]" id="contact">
+    <section class="mt-[40px]" id="contact" slot="contact">
       <h2>Contact</h2>
        Feel free to reach out/connect with me, I'm always open to chat!
       <div
@@ -285,11 +279,7 @@ import { Icon } from "astro-icon";
         </span>
       </div>
     </section>
-    <p class="text-center font-thin text-sm">
-      Made with <span class="animate-pulse">❤️</span> by Mimi Damnjanovic
-    </p>
-  </main>
-</Layout>
+</BaseLayout>
 
 <style>
   :target {
