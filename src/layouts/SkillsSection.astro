@@ -1,57 +1,43 @@
+---
+import TechList from "../components/TechList.astro";
+
+const frameworks = [
+  "Django/Django Rest Framework",
+  "Express.js",
+  "Node.js",
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "Recharts",
+  "Chart.js",
+  "Cypress",
+  "Cucumber",
+  "React Testing Library",
+  "Jest",
+];
+
+const languages = ["JavaScript", "TypeScript", "Python", "HTML/CSS"];
+
+const dbTech = ["PostgreSQL", "Cube", "Prisma"];
+---
+
 <section id="skills">
-    <h2 class="mt-[20px]">Skills</h2>
-    <p class="mb-[10px]">
-      The technologies that I'm most comfortable with at the moment.
-    </p>
-    <h3>Languages:</h3>
-    <ul class="mt-[10px] mb-[10px] inline-block">
-      {
-        ["JavaScript", "TypeScript", "Python", "HTML/CSS"].map((stack) => {
-          return (
-            <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
-              {stack}
-            </li>
-          );
-        })
-      }
-    </ul>
-    <h3>Frameworks/Libraries:</h3>
-    <ul class="mt-[10px] mb-[10px] inline-block">
-      {
-        [
-          "Django/Django Rest Framework",
-          "Express.js",
-          "Node.js",
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Recharts",
-          "Chart.js",
-          "Cypress",
-          "Cucumber",
-          "React Testing Library",
-          "Jest",
-        ].map((stack) => {
-          return (
-            <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
-              {stack}
-            </li>
-          );
-        })
-      }
-    </ul>
-    <h3>Database Technologies:</h3>
-    <ul class="mt-[10px] inline-block">
-      {
-        ["PostgreSQL", "Cube", "Prisma"].map((stack) => {
-          return (
-            <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
-              {stack}
-            </li>
-          );
-        })
-      }
-    </ul>
+  <h2 class="mt-[20px]">Skills</h2>
+  <p class="mb-[10px]">
+    The technologies that I'm most comfortable with at the moment.
+  </p>
+  <h3>Languages:</h3>
+  <TechList
+    listClasses="mt-[10px] mb-[10px] inline-block"
+    techStack={languages}
+  />
+  <h3>Frameworks/Libraries:</h3>
+  <TechList
+    listClasses="mt-[10px] mb-[10px] inline-block"
+    techStack={frameworks}
+  />
+  <h3>Database Technologies:</h3>
+  <TechList listClasses="mt-[10px] inline-block" techStack={dbTech} />
 </section>
 
 <style>

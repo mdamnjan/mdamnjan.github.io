@@ -1,5 +1,6 @@
 ---
 import Icon from "astro-icon";
+import TechList from "./TechList.astro";
 interface Props {
   title: string;
   description: string;
@@ -44,17 +45,7 @@ const {
       />
     )
   }
-  <ul class="mt-[20px]">
-    {
-      techStack.map((stack) => {
-        return (
-          <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
-            {stack}
-          </li>
-        );
-      })
-    }
-  </ul>
+  <TechList listClasses="mt-[20px]" techStack={techStack}/>
   <div class="self-end mt-[10px]">
     {
       githubLink && (
