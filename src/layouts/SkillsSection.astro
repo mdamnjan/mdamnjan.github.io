@@ -1,0 +1,74 @@
+---
+interface Props {
+  slot: string;
+  id: string;
+}
+
+const { slot, id } = Astro.props;
+---
+
+<section id={id} slot={slot}>
+    <h2 class="mt-[20px]">Skills</h2>
+    <p class="mb-[10px]">
+      The technologies that I'm most comfortable with at the moment.
+    </p>
+    <h3>Languages:</h3>
+    <ul class="mt-[10px] mb-[10px] inline-block">
+      {
+        ["JavaScript", "TypeScript", "Python", "HTML/CSS"].map((stack) => {
+          return (
+            <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
+              {stack}
+            </li>
+          );
+        })
+      }
+    </ul>
+    <h3>Frameworks/Libraries:</h3>
+    <ul class="mt-[10px] mb-[10px] inline-block">
+      {
+        [
+          "Django/Django Rest Framework",
+          "Express.js",
+          "Node.js",
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "Recharts",
+          "Chart.js",
+          "Cypress",
+          "Cucumber",
+          "React Testing Library",
+          "Jest",
+        ].map((stack) => {
+          return (
+            <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
+              {stack}
+            </li>
+          );
+        })
+      }
+    </ul>
+    <h3>Database Technologies:</h3>
+    <ul class="mt-[10px] inline-block">
+      {
+        ["PostgreSQL", "Cube", "Prisma"].map((stack) => {
+          return (
+            <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
+              {stack}
+            </li>
+          );
+        })
+      }
+    </ul>
+</section>
+
+<style>
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+    text-align: left;
+    margin-bottom: 1em;
+  }
+</style>

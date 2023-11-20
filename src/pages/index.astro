@@ -7,68 +7,15 @@ import IntroSection from "../layouts/IntroSection.astro";
 import AboutMeSection from "../layouts/AboutMeSection.astro";
 import EducationSection from "../layouts/EducationSection.astro";
 import ExperienceSection from "../layouts/ExperienceSection.astro";
+import SkillsSection from "../layouts/SkillsSection.astro";
 ---
 
 <BaseLayout title="Mimi Damnjanovic">
   <IntroSection slot="intro" />
   <AboutMeSection id="about-me" slot="about-me" />
-  <EducationSection id="education" slot="education"/>
-  <ExperienceSection id="experience" slot="experience"/>
-  <section id="skills" slot="skills">
-    <h2 class="mt-[20px]">Skills</h2>
-    <p class="mb-[10px]">
-      The technologies that I'm most comfortable with at the moment.
-    </p>
-    <h3>Languages:</h3>
-    <ul class="mt-[10px] mb-[10px] inline-block">
-      {
-        ["JavaScript", "TypeScript", "Python", "HTML/CSS"].map((stack) => {
-          return (
-            <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
-              {stack}
-            </li>
-          );
-        })
-      }
-    </ul>
-    <h3>Frameworks/Libraries:</h3>
-    <ul class="mt-[10px] mb-[10px] inline-block">
-      {
-        [
-          "Django/Django Rest Framework",
-          "Express.js",
-          "Node.js",
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Recharts",
-          "Chart.js",
-          "Cypress",
-          "Cucumber",
-          "React Testing Library",
-          "Jest",
-        ].map((stack) => {
-          return (
-            <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
-              {stack}
-            </li>
-          );
-        })
-      }
-    </ul>
-    <h3>Database Technologies:</h3>
-    <ul class="mt-[10px] inline-block">
-      {
-        ["PostgreSQL", "Cube", "Prisma"].map((stack) => {
-          return (
-            <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
-              {stack}
-            </li>
-          );
-        })
-      }
-    </ul>
-  </section>
+  <EducationSection id="education" slot="education" />
+  <ExperienceSection id="experience" slot="experience" />
+  <SkillsSection id="skills" slot="skills" />
   <section id="projects" slot="projects">
     <h2 class="mt-[20px]">Projects</h2>
     <p class="mb-[10px]">Some projects I've worked on.</p>
