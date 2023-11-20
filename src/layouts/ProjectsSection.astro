@@ -53,7 +53,15 @@ import ProjectCard from "../components/ProjectCard.astro";
       description={"A Python/Selenium scraper that grabs exhibit information from the Toronto 2023 Nuit Blanche website and preps it to be imported into Google My Maps.\n\n I used it to generate the map below (click on an icon to see get the exhibit's details and directions):"}
       techStack={["Python", "Selenium"]}
       githubLink="https://github.com/mdamnjan/nuit-blanche-scraper"
-    />
+    >
+      <iframe
+        slot="embedded"
+        title="Google My Maps"
+        src="https://www.google.com/maps/d/u/0/embed?mid=14A7B4a7-pqqFu2PgVr7gx8CJ6p1EGdo&ehbc=2E312F"
+        height="300"
+        width={"100%"}
+        class="mw-[500px] mt-[20px]"></iframe>
+    </ProjectCard>
     <ProjectCard
       title="@sdelements/flan"
       description="A handy CLI tool I helped build during my time at Security Compass that leverages Git to allow easy and efficient sharing/loading of Postgres instances."
