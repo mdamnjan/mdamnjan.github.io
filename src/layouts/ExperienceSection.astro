@@ -1,13 +1,4 @@
----
-interface Props {
-  slot: string;
-  id: string;
-}
-
-const { slot, id } = Astro.props;
----
-
-<section id={id} slot={slot}>
+<section id="experience">
   <h2 class="mt-[20px]">Experience</h2>
   <h3 class="font-semibold text-2xl">
     Software Engineer Intern @ Security Compass
@@ -15,7 +6,7 @@ const { slot, id } = Astro.props;
   <span class="text-sm">May 2020-Aug 2021 (16 months)</span>
   <ul>
     <li class="text-xl list-disc m-[15px]">
-      Worked a scrum team with other developers, designers, product managers and
+      Worked on a scrum team with other developers, designers, product managers and
       QA to build and maintain reporting/analytics functionalities for <a
         href="https://www.securitycompass.com/sdelements/"
         target="_blank"

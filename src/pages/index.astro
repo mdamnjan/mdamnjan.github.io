@@ -1,87 +1,21 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ProjectCard from "../components/ProjectCard.astro";
 
-import { Icon } from "astro-icon";
 import IntroSection from "../layouts/IntroSection.astro";
 import AboutMeSection from "../layouts/AboutMeSection.astro";
 import EducationSection from "../layouts/EducationSection.astro";
 import ExperienceSection from "../layouts/ExperienceSection.astro";
 import SkillsSection from "../layouts/SkillsSection.astro";
 import ProjectsSection from "../layouts/ProjectsSection.astro";
+import ContactSection from "../layouts/ContactSection.astro";
 ---
 
 <BaseLayout title="Mimi Damnjanovic">
   <IntroSection slot="intro" />
-  <AboutMeSection id="about-me" slot="about-me" />
-  <EducationSection id="education" slot="education" />
-  <ExperienceSection id="experience" slot="experience" />
-  <SkillsSection id="skills" slot="skills" />
-  <ProjectsSection id="projects" slot="projects" />
-  <section id="contact" slot="contact">
-    <h2>Contact</h2>
-     Feel free to reach out/connect with me, I'm always open to chat!
-    <div
-      class="flex items-center justify-around max-[500px] mr-auto mt-10 mb-20"
-    >
-      <span class="flex items-center gap-[5px]" html-for="email"
-        >Email:
-        <a
-          id="email"
-          aria-label="email"
-          href="mailto:midamnjan@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Icon height="24px" width="24px" pack="mdi" name="envelope" />
-        </a>
-      </span>
-      <span class="flex items-center gap-[5px]" html-for="github"
-        >GitHub:
-        <a
-          id="github"
-          arial-label="github"
-          href="https://github.com/mdamnjan"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Icon height="24px" width="24px" pack="mdi" name="github" />
-        </a>
-      </span>
-      <span class="flex items-center gap-[5px]" html-for="linkedin"
-        >LinkedIn:
-        <a
-          id="linkedin"
-          aria-label="linkedin"
-          href="https://ca.linkedin.com/in/mimi-damnjanovic"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Icon height="24px" width="24px" pack="mdi" name="linkedin" />
-        </a>
-      </span>
-    </div>
-  </section>
+  <AboutMeSection slot="about-me" />
+  <EducationSection slot="education" />
+  <ExperienceSection slot="experience" />
+  <SkillsSection slot="skills" />
+  <ProjectsSection slot="projects" />
+  <ContactSection slot="contact" />
 </BaseLayout>
-
-<style>
-  a {
-    color: aquamarine;
-    text-decoration: underline;
-  }
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: left;
-    margin-bottom: 1em;
-  }
-
-  h2 {
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 1;
-    text-align: left;
-    margin-bottom: 1em;
-  }
-</style>

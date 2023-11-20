@@ -1,13 +1,4 @@
----
-interface Props {
-  slot: string;
-  id: string;
-}
-
-const { slot, id } = Astro.props;
----
-
-<section id={id} slot={slot}>
+<section id="about-me">
   <h2>About me</h2>
   <div class="flex items-start gap-10 flex-wrap">
     <img

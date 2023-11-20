@@ -1,0 +1,61 @@
+---
+import Icon from "astro-icon";
+---
+
+<section id="contact">
+  <h2>Contact</h2>
+   Feel free to reach out/connect with me, I'm always open to chat!
+  <div class="flex items-center justify-around max-[500px] mr-auto mt-10 mb-20">
+    <span class="flex items-center gap-[5px]" html-for="email"
+      >Email:
+      <a
+        id="email"
+        aria-label="email"
+        href="mailto:midamnjan@gmail.com"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon height="24px" width="24px" pack="mdi" name="envelope" />
+      </a>
+    </span>
+    <span class="flex items-center gap-[5px]" html-for="github"
+      >GitHub:
+      <a
+        id="github"
+        arial-label="github"
+        href="https://github.com/mdamnjan"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon height="24px" width="24px" pack="mdi" name="github" />
+      </a>
+    </span>
+    <span class="flex items-center gap-[5px]" html-for="linkedin"
+      >LinkedIn:
+      <a
+        id="linkedin"
+        aria-label="linkedin"
+        href="https://ca.linkedin.com/in/mimi-damnjanovic"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon height="24px" width="24px" pack="mdi" name="linkedin" />
+      </a>
+    </span>
+  </div>
+</section>
+
+<style>
+  a {
+    color: aquamarine;
+    text-decoration: underline;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+    text-align: left;
+    margin-bottom: 1em;
+  }
+</style>
