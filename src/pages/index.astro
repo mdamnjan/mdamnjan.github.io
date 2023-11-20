@@ -8,6 +8,7 @@ import AboutMeSection from "../layouts/AboutMeSection.astro";
 import EducationSection from "../layouts/EducationSection.astro";
 import ExperienceSection from "../layouts/ExperienceSection.astro";
 import SkillsSection from "../layouts/SkillsSection.astro";
+import ProjectsSection from "../layouts/ProjectsSection.astro";
 ---
 
 <BaseLayout title="Mimi Damnjanovic">
@@ -16,67 +17,8 @@ import SkillsSection from "../layouts/SkillsSection.astro";
   <EducationSection id="education" slot="education" />
   <ExperienceSection id="experience" slot="experience" />
   <SkillsSection id="skills" slot="skills" />
-  <section id="projects" slot="projects">
-    <h2 class="mt-[20px]">Projects</h2>
-    <p class="mb-[10px]">Some projects I've worked on.</p>
-    <ul role="list" class="link-card-grid">
-      <ProjectCard
-        title="My Plant Diary"
-        description={`A full-stack web app that helps you keep your houseplants alive built with React, Django and PostgreSQL.`}
-        summaryPoints={[
-          "Lets you schedule plant care tasks (e.g. watering, repotting, pruning), take notes and make progress updates",
-          "Uses Firebase Cloud Storage to handle image uploads",
-        ]}
-        techStack={[
-          "React",
-          "Material UI",
-          "Django",
-          "Django Rest Framework",
-          "PostgreSQL",
-          "Firebase",
-        ]}
-        githubLink="https://github.com/mdamnjan/my-plant-diary"
-        liveLink="https://my-plant-diary.up.railway.app/"
-      />
-      <ProjectCard
-        title="GitHub Stats Viewer"
-        description="A web app that lets you see cool stats related to a GitHub user's account or repository."
-        summaryPoints={[
-          "Has a sign in with GitHub Oauth option to allow users to include their private repositories in the calculated stats",
-        ]}
-        techStack={[
-          "React",
-          "Chart.js",
-          "Bootstrap",
-          "Node.js",
-          "Express.js",
-          "GitHub API",
-        ]}
-        githubLink="https://github.com/mdamnjan/gh-stats-viewer"
-        liveLink="https://gh-stats-viewer.up.railway.app/"
-      />
-      <ProjectCard
-        title="Personal Website"
-        description="The website you're on right now! I recently rebuilt it using Astro.js 🚀 and Tailwind CSS.\n I used GitHub Actions to set up automatic deployment to GitHub Pages anytime I push any changes to my repository."
-        techStack={["Astro", "Tailwind CSS", "GitHub Actions", "GitHub Pages"]}
-        githubLink="https://github.com/mdamnjan/mdamnjan.github.io/"
-        liveLink="https://mdamnjan.github.io/"
-      />
-      <ProjectCard
-        title="Nuit Blanche Scraper"
-        description={"A Python/Selenium scraper that grabs exhibit information from the Toronto 2023 Nuit Blanche website and preps it to be imported into Google My Maps.\n\n I used it to generate the map below (click on an icon to see get the exhibit's details and directions):"}
-        techStack={["Python", "Selenium"]}
-        githubLink="https://github.com/mdamnjan/nuit-blanche-scraper"
-      />
-      <ProjectCard
-        title="@sdelements/flan"
-        description="A handy CLI tool I helped build during my time at Security Compass that leverages Git to allow easy and efficient sharing/loading of Postgres instances."
-        techStack={["Typescript", "Oclif"]}
-        githubLink="https://github.com/sdelements/flan"
-      />
-    </ul>
-  </section>
-  <section class="mt-[40px]" id="contact" slot="contact">
+  <ProjectsSection id="projects" slot="projects" />
+  <section id="contact" slot="contact">
     <h2>Contact</h2>
      Feel free to reach out/connect with me, I'm always open to chat!
     <div
@@ -123,28 +65,9 @@ import SkillsSection from "../layouts/SkillsSection.astro";
 </BaseLayout>
 
 <style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: calc(100% - 20px);
-    max-width: 1100px;
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-
   a {
     color: aquamarine;
     text-decoration: underline;
-  }
-  .astro-a {
-    position: absolute;
-    top: -32px;
-    left: 50%;
-    transform: translatex(-50%);
-    width: 220px;
-    height: auto;
-    z-index: -1;
   }
   h1 {
     font-size: 4rem;
@@ -160,37 +83,5 @@ import SkillsSection from "../layouts/SkillsSection.astro";
     line-height: 1;
     text-align: left;
     margin-bottom: 1em;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    margin-bottom: 2rem;
-    border: 1px solid rgba(var(--accent-light), 25%);
-    background: linear-gradient(
-      rgba(var(--accent-dark), 66%),
-      rgba(var(--accent-dark), 33%)
-    );
-    padding: 1.5rem;
-    border-radius: 8px;
-  }
-  .instructions code {
-    font-size: 0.8em;
-    font-weight: bold;
-    background: rgba(var(--accent-light), 12%);
-    color: rgb(var(--accent-light));
-    border-radius: 4px;
-    padding: 0.3em 0.4em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent-light));
-  }
-  .link-card-grid {
-    gap: 2rem;
-    display: grid;
   }
 </style>
