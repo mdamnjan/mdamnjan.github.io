@@ -5,45 +5,13 @@ import ProjectCard from "../components/ProjectCard.astro";
 import { Icon } from "astro-icon";
 import IntroSection from "../layouts/IntroSection.astro";
 import AboutMeSection from "../layouts/AboutMeSection.astro";
+import EducationSection from "../layouts/EducationSection.astro";
 ---
 
 <BaseLayout title="Mimi Damnjanovic">
   <IntroSection slot="intro" />
   <AboutMeSection id="about-me" slot="about-me" />
-  <section id="education" slot="education">
-    <h2 class="mt-[20px]">Education</h2>
-    <h3 class="font-semibold text-2xl">University of Toronto</h3>
-    <h4 class="italic">
-      Bachelor's of science (BSc) - specialist in Computer Science, minor in
-      Physics
-    </h4>
-    <span class="text-sm">2017-2023</span>
-    <ul>
-      <h3>Coursework</h3>
-      <li class="text-base list-disc ml-[20px]">
-        Algorithm Design and Analysis, Data Structures and Analysis, Software
-        Design, Software Systems and Tools Programming, Operating Systems, Intro
-        to Databases, Intro to AI, Intro to Machine Learning, Intro to Neural
-        Networks
-      </li>
-    </ul>
-    <ul>
-      <h3>Extracurriculars</h3>
-      <div class="ml-[20px]">
-        <h4 class="text-smaller">
-          Bioinformatics and Computational Biology Student Union (BCBSU)
-        </h4>
-        <ul>
-          <li class="text-base list-disc ml-[20px]">
-            Executive team member (events director) 2019-2020
-          </li>
-          <li class="text-base list-disc ml-[20px]">
-            BioHacks hackathon mentor 2021
-          </li>
-        </ul>
-      </div>
-    </ul>
-  </section>
+  <EducationSection id="education" slot="education"/>
   <section id="experience" slot="experience">
     <h2 class="mt-[20px]">Experience</h2>
     <h3 class="font-semibold text-2xl">
