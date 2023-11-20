@@ -3,290 +3,275 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 
 import { Icon } from "astro-icon";
+import IntroSection from "../layouts/IntroSection.astro";
 ---
 
 <BaseLayout title="Mimi Damnjanovic">
-    <section slot="intro">
-      <h2 class="">Hi there 👋, I'm Mimi</h2>
-      <h2 class="text-2xl">Welcome to my website!</h2>
-    </section>
-    <section id="about-me" slot="about-me">
-      <h2>About me</h2>
-      <div class="flex items-start gap-10 flex-wrap">
-        <img
-          class="h-[200px] w-[200px] inline-block object-cover rounded-lg border-solid border-4 border-teal-300"
-          src="profile_pic2.png"
-        />
-        <div>
-          <p class="inline-block mb-5">
-            I am a recent computer science and physics graduate looking for
-            exciting new software engineering/development opportunities.
-          </p>
-          <p class="inline-block mb-5">
-            I have a little over 1 year (16 months) of full-stack experience
-            working as a software engineer intern at
-            <a
-              href="https://www.securitycompass.com/"
-              target="_blank"
-              rel="noreferrer">Security Compass</a
-            >
-             on the Reporting team for
-            <a
-              href="https://www.securitycompass.com/sdelements/"
-              target="_blank"
-              rel="noreferrer">SD Elements</a
-            >. I primarily worked with TypeScript, React, Django, Cube, and
-            PostgreSQL during my time there.
-          </p>
-          <p class="inline-block">
-            Outside of programming I like to play video games 🎮 (recently:
-            Katamari Reroll, Harvest Moon, Valheim, Pokemon Scarlet), learn new
-            languages, and play guitar 🎸
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="education" slot="education">
-      <h2 class="mt-[20px]">Education</h2>
-      <h3 class="font-semibold text-2xl">University of Toronto</h3>
-      <h4 class="italic">
-        Bachelor's of science (BSc) - specialist in Computer Science, minor in
-        Physics
-      </h4>
-      <span class="text-sm">2017-2023</span>
-      <ul>
-        <h3>Coursework</h3>
-        <li class="text-base list-disc ml-[20px]">
-          Algorithm Design and Analysis, Data Structures and Analysis, Software
-          Design, Software Systems and Tools Programming, Operating Systems,
-          Intro to Databases, Intro to AI, Intro to Machine Learning, Intro to
-          Neural Networks
-        </li>
-      </ul>
-      <ul>
-        <h3>Extracurriculars</h3>
-        <div class="ml-[20px]">
-          <h4 class="text-smaller">
-            Bioinformatics and Computational Biology Student Union (BCBSU)
-          </h4>
-          <ul>
-            <li class="text-base list-disc ml-[20px]">
-              Executive team member (events director) 2019-2020
-            </li>
-            <li class="text-base list-disc ml-[20px]">
-              BioHacks hackathon mentor 2021
-            </li>
-          </ul>
-        </div>
-      </ul>
-    </section>
-    <section id="experience" slot="experience">
-      <h2 class="mt-[20px]">Experience</h2>
-      <h3 class="font-semibold text-2xl">
-        Software Engineer Intern @ Security Compass
-      </h3>
-      <span class="text-sm">May 2020-Aug 2021 (16 months)</span>
-      <ul>
-        <li class="text-xl list-disc m-[15px]">
-          Worked a scrum team with other developers, designers, product managers
-          and QA to build and maintain reporting/analytics functionalities for <a
+  <IntroSection slot="intro" />
+  <section id="about-me" slot="about-me">
+    <h2>About me</h2>
+    <div class="flex items-start gap-10 flex-wrap">
+      <img
+        class="h-[200px] w-[200px] inline-block object-cover rounded-lg border-solid border-4 border-teal-300"
+        src="profile_pic2.png"
+      />
+      <div>
+        <p class="inline-block mb-5">
+          I am a recent computer science and physics graduate looking for
+          exciting new software engineering/development opportunities.
+        </p>
+        <p class="inline-block mb-5">
+          I have a little over 1 year (16 months) of full-stack experience
+          working as a software engineer intern at
+          <a
+            href="https://www.securitycompass.com/"
+            target="_blank"
+            rel="noreferrer">Security Compass</a
+          >
+           on the Reporting team for
+          <a
             href="https://www.securitycompass.com/sdelements/"
             target="_blank"
             rel="noreferrer">SD Elements</a
-          >, following agile methodologies
-        </li>
-        <li class="text-xl list-disc m-[15px]">
-          Developed reporting API endpoints using Django Rest Framework, Cube and
-          PostgreSQL used by clients as well as internally to power
-          application-wide reporting
-        </li>
-        <li class="text-xl list-disc m-[15px]">
-          Created an analytics dashboard builder using React, Typescript, Cube
-          and Django REST Framework, allowing users to create custom dashboards
-          and widgets to visualize the security health of their applications in
-          a digestible format
-        </li>
-        <li class="text-xl list-disc m-[15px]">
-          Built out a suite of automated CI/CD end-to-end tests using Cypress
-          and Cucumber, greatly reducing regression testing time per release
-        </li>
-      </ul>
-    </section>
-    <section id="skills" slot="skills">
-      <h2 class="mt-[20px]">Skills</h2>
-      <p class="mb-[10px]">
-        The technologies that I'm most comfortable with at the moment.
-      </p>
-      <h3>Languages:</h3>
-      <ul class="mt-[10px] mb-[10px] inline-block">
-        {
-          ["JavaScript", "TypeScript", "Python", "HTML/CSS"].map((stack) => {
-            return (
-              <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
-                {stack}
-              </li>
-            );
-          })
-        }
-      </ul>
-      <h3>Frameworks/Libraries:</h3>
-      <ul class="mt-[10px] mb-[10px] inline-block">
-        {
-          [
-            "Django/Django Rest Framework",
-            "Express.js",
-            "Node.js",
-            "React",
-            "Next.js",
-            "Tailwind CSS",
-            "Recharts",
-            "Chart.js",
-            "Cypress",
-			"Cucumber",
-            "React Testing Library",
-            "Jest",
-          ].map((stack) => {
-            return (
-              <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
-                {stack}
-              </li>
-            );
-          })
-        }
-      </ul>
-      <h3>Database Technologies:</h3>
-      <ul class="mt-[10px] inline-block">
-        {
-          ["PostgreSQL", "Cube", "Prisma"].map((stack) => {
-            return (
-              <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
-                {stack}
-              </li>
-            );
-          })
-        }
-      </ul>
-    </section>
-    <section id="projects" slot="projects">
-      <h2 class="mt-[20px]">Projects</h2>
-      <p class="mb-[10px]">Some projects I've worked on.</p>
-      <ul role="list" class="link-card-grid">
-        <ProjectCard
-          title="My Plant Diary"
-          description={`A full-stack web app that helps you keep your houseplants alive built with React, Django and PostgreSQL.`}
-          summaryPoints={[
-            "Lets you schedule plant care tasks (e.g. watering, repotting, pruning), take notes and make progress updates",
-            "Uses Firebase Cloud Storage to handle image uploads",
-          ]}
-          techStack={[
-            "React",
-            "Material UI",
-            "Django",
-            "Django Rest Framework",
-            "PostgreSQL",
-            "Firebase",
-          ]}
-          githubLink="https://github.com/mdamnjan/my-plant-diary"
-          liveLink="https://my-plant-diary.up.railway.app/"
-        />
-        <ProjectCard
-          title="GitHub Stats Viewer"
-          description="A web app that lets you see cool stats related to a GitHub user's account or repository."
-          summaryPoints={[
-            "Has a sign in with GitHub Oauth option to allow users to include their private repositories in the calculated stats",
-          ]}
-          techStack={[
-            "React",
-            "Chart.js",
-            "Bootstrap",
-            "Node.js",
-            "Express.js",
-            "GitHub API",
-          ]}
-          githubLink="https://github.com/mdamnjan/gh-stats-viewer"
-          liveLink="https://gh-stats-viewer.up.railway.app/"
-        />
-        <ProjectCard
-          title="Personal Website"
-          description="The website you're on right now! I recently rebuilt it using Astro.js 🚀 and Tailwind CSS.\n I used GitHub Actions to set up automatic deployment to GitHub Pages anytime I push any changes to my repository."
-          techStack={[
-            "Astro",
-            "Tailwind CSS",
-            "GitHub Actions",
-            "GitHub Pages",
-          ]}
-          githubLink="https://github.com/mdamnjan/mdamnjan.github.io/"
-          liveLink="https://mdamnjan.github.io/"
-        />
-        <ProjectCard
-          title="Nuit Blanche Scraper"
-          description={"A Python/Selenium scraper that grabs exhibit information from the Toronto 2023 Nuit Blanche website and preps it to be imported into Google My Maps.\n\n I used it to generate the map below (click on an icon to see get the exhibit's details and directions):"}
-          techStack={["Python", "Selenium"]}
-          githubLink="https://github.com/mdamnjan/nuit-blanche-scraper"
-        />
-        <ProjectCard
-          title="@sdelements/flan"
-          description="A handy CLI tool I helped build during my time at Security Compass that leverages Git to allow easy and efficient sharing/loading of Postgres instances."
-          techStack={["Typescript", "Oclif"]}
-          githubLink="https://github.com/sdelements/flan"
-        />
-      </ul>
-    </section>
-    <section class="mt-[40px]" id="contact" slot="contact">
-      <h2>Contact</h2>
-       Feel free to reach out/connect with me, I'm always open to chat!
-      <div
-        class="flex items-center justify-around max-[500px] mr-auto mt-10 mb-20"
-      >
-        <span class="flex items-center gap-[5px]" html-for="email"
-          >Email:
-          <a
-            id="email"
-            aria-label="email"
-            href="mailto:midamnjan@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Icon height="24px" width="24px" pack="mdi" name="envelope" />
-          </a>
-        </span>
-        <span class="flex items-center gap-[5px]" html-for="github"
-          >GitHub:
-          <a
-            id="github"
-            arial-label="github"
-            href="https://github.com/mdamnjan"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Icon height="24px" width="24px" pack="mdi" name="github" />
-          </a>
-        </span>
-        <span class="flex items-center gap-[5px]" html-for="linkedin"
-          >LinkedIn:
-          <a
-            id="linkedin"
-            aria-label="linkedin"
-            href="https://ca.linkedin.com/in/mimi-damnjanovic"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Icon height="24px" width="24px" pack="mdi" name="linkedin" />
-          </a>
-        </span>
+          >. I primarily worked with TypeScript, React, Django, Cube, and
+          PostgreSQL during my time there.
+        </p>
+        <p class="inline-block">
+          Outside of programming I like to play video games 🎮 (recently:
+          Katamari Reroll, Harvest Moon, Valheim, Pokemon Scarlet), learn new
+          languages, and play guitar 🎸
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
+  <section id="education" slot="education">
+    <h2 class="mt-[20px]">Education</h2>
+    <h3 class="font-semibold text-2xl">University of Toronto</h3>
+    <h4 class="italic">
+      Bachelor's of science (BSc) - specialist in Computer Science, minor in
+      Physics
+    </h4>
+    <span class="text-sm">2017-2023</span>
+    <ul>
+      <h3>Coursework</h3>
+      <li class="text-base list-disc ml-[20px]">
+        Algorithm Design and Analysis, Data Structures and Analysis, Software
+        Design, Software Systems and Tools Programming, Operating Systems, Intro
+        to Databases, Intro to AI, Intro to Machine Learning, Intro to Neural
+        Networks
+      </li>
+    </ul>
+    <ul>
+      <h3>Extracurriculars</h3>
+      <div class="ml-[20px]">
+        <h4 class="text-smaller">
+          Bioinformatics and Computational Biology Student Union (BCBSU)
+        </h4>
+        <ul>
+          <li class="text-base list-disc ml-[20px]">
+            Executive team member (events director) 2019-2020
+          </li>
+          <li class="text-base list-disc ml-[20px]">
+            BioHacks hackathon mentor 2021
+          </li>
+        </ul>
+      </div>
+    </ul>
+  </section>
+  <section id="experience" slot="experience">
+    <h2 class="mt-[20px]">Experience</h2>
+    <h3 class="font-semibold text-2xl">
+      Software Engineer Intern @ Security Compass
+    </h3>
+    <span class="text-sm">May 2020-Aug 2021 (16 months)</span>
+    <ul>
+      <li class="text-xl list-disc m-[15px]">
+        Worked a scrum team with other developers, designers, product managers
+        and QA to build and maintain reporting/analytics functionalities for <a
+          href="https://www.securitycompass.com/sdelements/"
+          target="_blank"
+          rel="noreferrer">SD Elements</a
+        >, following agile methodologies
+      </li>
+      <li class="text-xl list-disc m-[15px]">
+        Developed reporting API endpoints using Django Rest Framework, Cube and
+        PostgreSQL used by clients as well as internally to power
+        application-wide reporting
+      </li>
+      <li class="text-xl list-disc m-[15px]">
+        Created an analytics dashboard builder using React, Typescript, Cube and
+        Django REST Framework, allowing users to create custom dashboards and
+        widgets to visualize the security health of their applications in a
+        digestible format
+      </li>
+      <li class="text-xl list-disc m-[15px]">
+        Built out a suite of automated CI/CD end-to-end tests using Cypress and
+        Cucumber, greatly reducing regression testing time per release
+      </li>
+    </ul>
+  </section>
+  <section id="skills" slot="skills">
+    <h2 class="mt-[20px]">Skills</h2>
+    <p class="mb-[10px]">
+      The technologies that I'm most comfortable with at the moment.
+    </p>
+    <h3>Languages:</h3>
+    <ul class="mt-[10px] mb-[10px] inline-block">
+      {
+        ["JavaScript", "TypeScript", "Python", "HTML/CSS"].map((stack) => {
+          return (
+            <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
+              {stack}
+            </li>
+          );
+        })
+      }
+    </ul>
+    <h3>Frameworks/Libraries:</h3>
+    <ul class="mt-[10px] mb-[10px] inline-block">
+      {
+        [
+          "Django/Django Rest Framework",
+          "Express.js",
+          "Node.js",
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "Recharts",
+          "Chart.js",
+          "Cypress",
+          "Cucumber",
+          "React Testing Library",
+          "Jest",
+        ].map((stack) => {
+          return (
+            <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
+              {stack}
+            </li>
+          );
+        })
+      }
+    </ul>
+    <h3>Database Technologies:</h3>
+    <ul class="mt-[10px] inline-block">
+      {
+        ["PostgreSQL", "Cube", "Prisma"].map((stack) => {
+          return (
+            <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
+              {stack}
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+  <section id="projects" slot="projects">
+    <h2 class="mt-[20px]">Projects</h2>
+    <p class="mb-[10px]">Some projects I've worked on.</p>
+    <ul role="list" class="link-card-grid">
+      <ProjectCard
+        title="My Plant Diary"
+        description={`A full-stack web app that helps you keep your houseplants alive built with React, Django and PostgreSQL.`}
+        summaryPoints={[
+          "Lets you schedule plant care tasks (e.g. watering, repotting, pruning), take notes and make progress updates",
+          "Uses Firebase Cloud Storage to handle image uploads",
+        ]}
+        techStack={[
+          "React",
+          "Material UI",
+          "Django",
+          "Django Rest Framework",
+          "PostgreSQL",
+          "Firebase",
+        ]}
+        githubLink="https://github.com/mdamnjan/my-plant-diary"
+        liveLink="https://my-plant-diary.up.railway.app/"
+      />
+      <ProjectCard
+        title="GitHub Stats Viewer"
+        description="A web app that lets you see cool stats related to a GitHub user's account or repository."
+        summaryPoints={[
+          "Has a sign in with GitHub Oauth option to allow users to include their private repositories in the calculated stats",
+        ]}
+        techStack={[
+          "React",
+          "Chart.js",
+          "Bootstrap",
+          "Node.js",
+          "Express.js",
+          "GitHub API",
+        ]}
+        githubLink="https://github.com/mdamnjan/gh-stats-viewer"
+        liveLink="https://gh-stats-viewer.up.railway.app/"
+      />
+      <ProjectCard
+        title="Personal Website"
+        description="The website you're on right now! I recently rebuilt it using Astro.js 🚀 and Tailwind CSS.\n I used GitHub Actions to set up automatic deployment to GitHub Pages anytime I push any changes to my repository."
+        techStack={["Astro", "Tailwind CSS", "GitHub Actions", "GitHub Pages"]}
+        githubLink="https://github.com/mdamnjan/mdamnjan.github.io/"
+        liveLink="https://mdamnjan.github.io/"
+      />
+      <ProjectCard
+        title="Nuit Blanche Scraper"
+        description={"A Python/Selenium scraper that grabs exhibit information from the Toronto 2023 Nuit Blanche website and preps it to be imported into Google My Maps.\n\n I used it to generate the map below (click on an icon to see get the exhibit's details and directions):"}
+        techStack={["Python", "Selenium"]}
+        githubLink="https://github.com/mdamnjan/nuit-blanche-scraper"
+      />
+      <ProjectCard
+        title="@sdelements/flan"
+        description="A handy CLI tool I helped build during my time at Security Compass that leverages Git to allow easy and efficient sharing/loading of Postgres instances."
+        techStack={["Typescript", "Oclif"]}
+        githubLink="https://github.com/sdelements/flan"
+      />
+    </ul>
+  </section>
+  <section class="mt-[40px]" id="contact" slot="contact">
+    <h2>Contact</h2>
+     Feel free to reach out/connect with me, I'm always open to chat!
+    <div
+      class="flex items-center justify-around max-[500px] mr-auto mt-10 mb-20"
+    >
+      <span class="flex items-center gap-[5px]" html-for="email"
+        >Email:
+        <a
+          id="email"
+          aria-label="email"
+          href="mailto:midamnjan@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Icon height="24px" width="24px" pack="mdi" name="envelope" />
+        </a>
+      </span>
+      <span class="flex items-center gap-[5px]" html-for="github"
+        >GitHub:
+        <a
+          id="github"
+          arial-label="github"
+          href="https://github.com/mdamnjan"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Icon height="24px" width="24px" pack="mdi" name="github" />
+        </a>
+      </span>
+      <span class="flex items-center gap-[5px]" html-for="linkedin"
+        >LinkedIn:
+        <a
+          id="linkedin"
+          aria-label="linkedin"
+          href="https://ca.linkedin.com/in/mimi-damnjanovic"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Icon height="24px" width="24px" pack="mdi" name="linkedin" />
+        </a>
+      </span>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
-  :target {
-    scroll-margin-top: 100px;
-  }
-
-  section {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
   main {
     margin: auto;
     padding: 1rem;

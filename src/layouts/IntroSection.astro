@@ -1,0 +1,22 @@
+---
+interface Props {
+  slot: string;
+}
+
+const { slot } = Astro.props;
+---
+
+<section slot={slot}>
+  <h2>Hi there 👋, I'm Mimi</h2>
+  <h2>Welcome to my website!</h2>
+</section>
+
+<style>
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+    text-align: left;
+    margin-bottom: 1em;
+  }
+</style>
