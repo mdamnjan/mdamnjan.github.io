@@ -1,0 +1,30 @@
+---
+import Icon from "astro-icon";
+
+interface Props {
+  id?: string;
+  ariaLabel: string;
+  link: string;
+  icon: { pack: string; name: string; classes?: string };
+  classes?: string;
+}
+
+const { id, ariaLabel, link, icon, classes } = Astro.props;
+---
+
+<a
+  class={classes}
+  id={id}
+  aria-label={ariaLabel}
+  href={link}
+  target="_blank"
+  rel="noreferrer"
+>
+  <Icon
+    height="24px"
+    width="24px"
+    pack={icon.pack}
+    name={icon.name}
+    class={icon.classes}
+  />
+</a>

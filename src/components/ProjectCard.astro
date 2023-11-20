@@ -1,6 +1,7 @@
 ---
 import Icon from "astro-icon";
 import TechList from "./TechList.astro";
+import IconLink from "./IconLink.astro";
 interface Props {
   title: string;
   description: string;
@@ -45,37 +46,26 @@ const {
       />
     )
   }
-  <TechList listClasses="mt-[20px]" techStack={techStack}/>
+  <TechList listClasses="mt-[20px]" techStack={techStack} />
   <div class="self-end mt-[10px]">
     {
       githubLink && (
-        <a
-          class="inline-block"
-          arial-label="github link"
-          href={githubLink}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Icon class="mb-[-1px]" height="24px" width="24px" pack="mdi" name="github" />
-        </a>
+        <IconLink
+          classes="inline-block"
+          ariaLabel="github repo link"
+          link={githubLink}
+          icon={{ pack: "mdi", name: "github", classes: "mb-[-1px]" }}
+        />
       )
     }
     {
       liveLink && (
-        <a
-          class="inline-block ml-[4px]"
-          arial-label="live link"
-          href={liveLink}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Icon
-            height="24px"
-            width="24px"
-            pack="bi"
-            name="box-arrow-up-right"
-          />
-        </a>
+        <IconLink
+          classes="inline-block ml-[4px]"
+          ariaLabel="live link"
+          link={liveLink}
+          icon={{ pack: "bi", name: "box-arrow-up-right" }}
+        />
       )
     }
   </div>

@@ -1,5 +1,5 @@
 ---
-import Icon from "astro-icon";
+import IconLink from "../components/IconLink.astro";
 ---
 
 <section id="contact">
@@ -8,49 +8,38 @@ import Icon from "astro-icon";
   <div class="flex items-center justify-around max-[500px] mr-auto mt-10 mb-20">
     <span class="flex items-center gap-[5px]" html-for="email"
       >Email:
-      <a
+      <IconLink
+        classes="text-aquamarine"
         id="email"
-        aria-label="email"
-        href="mailto:midamnjan@gmail.com"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Icon height="24px" width="24px" pack="mdi" name="envelope" />
-      </a>
+        ariaLabel="email address"
+        link="mailto:midamnjan@gmail.com"
+        icon={{ pack: "mdi", name: "envelope" }}
+      />
     </span>
     <span class="flex items-center gap-[5px]" html-for="github"
       >GitHub:
-      <a
+      <IconLink
+        classes="text-aquamarine"
         id="github"
-        arial-label="github"
-        href="https://github.com/mdamnjan"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Icon height="24px" width="24px" pack="mdi" name="github" />
-      </a>
+        ariaLabel="github profile link"
+        link="https://github.com/mdamnjan"
+        icon={{ pack: "mdi", name: "github" }}
+      />
     </span>
     <span class="flex items-center gap-[5px]" html-for="linkedin"
       >LinkedIn:
-      <a
+      <IconLink
+        classes="text-aquamarine"
         id="linkedin"
-        aria-label="linkedin"
-        href="https://ca.linkedin.com/in/mimi-damnjanovic"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Icon height="24px" width="24px" pack="mdi" name="linkedin" />
-      </a>
+        ariaLabel="linkedin profile link"
+        link="https://ca.linkedin.com/in/mimi-damnjanovic"
+        icon={{ pack: "mdi", name: "linkedin" }}
+      />
     </span>
   </div>
 </section>
 
 <style>
-  a {
-    color: aquamarine;
-    text-decoration: underline;
-  }
-  
   h2 {
     font-size: 2rem;
     font-weight: 500;

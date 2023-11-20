@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'acquamarine': 'rgb(127, 255, 212)'
+				'aquamarine': 'rgb(127, 255, 212)'
 			}
 		},
 	},
