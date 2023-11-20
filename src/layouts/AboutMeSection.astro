@@ -1,0 +1,60 @@
+---
+interface Props {
+  slot: string;
+  id: string;
+}
+
+const { slot, id } = Astro.props;
+---
+
+<section id={id} slot={slot}>
+  <h2>About me</h2>
+  <div class="flex items-start gap-10 flex-wrap">
+    <img
+      class="h-[200px] w-[200px] inline-block object-cover rounded-lg border-solid border-4 border-teal-300"
+      src="profile_pic2.png"
+    />
+    <div>
+      <p class="inline-block mb-5">
+        I am a recent computer science and physics graduate looking for exciting
+        new software engineering/development opportunities.
+      </p>
+      <p class="inline-block mb-5">
+        I have a little over 1 year (16 months) of full-stack experience working
+        as a software engineer intern at
+        <a
+          href="https://www.securitycompass.com/"
+          target="_blank"
+          rel="noreferrer">Security Compass</a
+        >
+         on the Reporting team for
+        <a
+          href="https://www.securitycompass.com/sdelements/"
+          target="_blank"
+          rel="noreferrer">SD Elements</a
+        >. I primarily worked with TypeScript, React, Django, Cube, and
+        PostgreSQL during my time there.
+      </p>
+      <p class="inline-block">
+        Outside of programming I like to play video games 🎮 (recently: Katamari
+        Reroll, Harvest Moon, Valheim, Pokemon Scarlet), learn new languages,
+        and play guitar 🎸
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+    text-align: left;
+    margin-bottom: 1em;
+  }
+
+  a {
+    color: aquamarine;
+    text-decoration: underline;
+  }
+</style>
