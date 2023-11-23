@@ -1,0 +1,20 @@
+---
+interface Props {
+  techStack: string[];
+  listClasses: string;
+}
+
+const { techStack, listClasses } = Astro.props;
+---
+
+<ul class={listClasses}>
+  {
+    techStack.map((stack) => {
+      return (
+        <li class="rounded-full inline-block bg-slate-600 p-[5px] text-sm mr-[5px]">
+          {stack}
+        </li>
+      );
+    })
+  }
+</ul>

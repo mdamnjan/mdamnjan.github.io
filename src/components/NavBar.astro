@@ -1,0 +1,29 @@
+---
+import { Astronav, MenuItems, MenuIcon, StickyHeader } from "astro-navbar";
+---
+
+<StickyHeader
+  class="sticky -webkit-sticky top-0 border-none z-20 transition-all bg-teal-500"
+  scrollY={50}
+  defaultClass="border-transparent"
+  activeClass="border-gray-200 backdrop-blur-lg"
+>
+  <Astronav closeOnClick>
+    <div class="flex w-full justify-end">
+      <div class="block md:hidden z-1 p-[20px]">
+        <MenuIcon class="w-4 h-4 text-gray-800 mr-[10px]" />
+      </div>
+    </div>
+    <MenuItems class="hidden md:flex justify-end absolute md:relative bg-teal-500 w-screen">
+      <hr />
+      <ul class="flex flex-col md:flex-row md:gap-5 ml-[10px] mr-[10px] p-[20px]">
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </MenuItems>
+  </Astronav>
+</StickyHeader>

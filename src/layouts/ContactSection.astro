@@ -1,0 +1,40 @@
+---
+import IconLink from "../components/IconLink.astro";
+---
+
+<section id="contact">
+  <h2>Contact</h2>
+   Feel free to reach out/connect with me, I'm always open to chat!
+  <div class="flex items-center justify-around max-[500px] mr-auto mt-10 mb-20">
+    <span class="flex items-center gap-[5px]" html-for="email"
+      >Email:
+      <IconLink
+        classes="text-aquamarine"
+        id="email"
+        ariaLabel="email address"
+        link="mailto:midamnjan@gmail.com"
+        icon={{ pack: "mdi", name: "envelope" }}
+      />
+    </span>
+    <span class="flex items-center gap-[5px]" html-for="github"
+      >GitHub:
+      <IconLink
+        classes="text-aquamarine"
+        id="github"
+        ariaLabel="github profile link"
+        link="https://github.com/mdamnjan"
+        icon={{ pack: "mdi", name: "github" }}
+      />
+    </span>
+    <span class="flex items-center gap-[5px]" html-for="linkedin"
+      >LinkedIn:
+      <IconLink
+        classes="text-aquamarine"
+        id="linkedin"
+        ariaLabel="linkedin profile link"
+        link="https://ca.linkedin.com/in/mimi-damnjanovic"
+        icon={{ pack: "mdi", name: "linkedin" }}
+      />
+    </span>
+  </div>
+</section>

@@ -1,3 +1,2 @@
-# Welcome 👋
-
-This is my personal website, made with `React` and `CSS` and deployed with `GitHub Actions` to `Github Pages`.
+# Personal Website
+My personal website, built with Astro 🚀 and Tailwind CSS and deployed to GitHub Pages using GitHub Actions.

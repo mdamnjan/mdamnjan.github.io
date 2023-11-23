@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import IntroSection from "../layouts/IntroSection.astro";
+import AboutMeSection from "../layouts/AboutMeSection.astro";
+import EducationSection from "../layouts/EducationSection.astro";
+import ExperienceSection from "../layouts/ExperienceSection.astro";
+import SkillsSection from "../layouts/SkillsSection.astro";
+import ProjectsSection from "../layouts/ProjectsSection.astro";
+import ContactSection from "../layouts/ContactSection.astro";
+---
+
+<BaseLayout title="Mimi Damnjanovic">
+  <IntroSection slot="intro" />
+  <AboutMeSection slot="about-me" />
+  <EducationSection slot="education" />
+  <ExperienceSection slot="experience" />
+  <SkillsSection slot="skills" />
+  <ProjectsSection slot="projects" />
+  <ContactSection slot="contact" />
+</BaseLayout>
