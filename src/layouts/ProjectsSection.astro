@@ -28,7 +28,8 @@ import ProjectCard from "../components/ProjectCard.astro";
       title="GitHub Stats Viewer"
       description="A web app that lets you see cool stats related to a GitHub user's account or repository."
       summaryPoints={[
-        "Has a sign in with GitHub Oauth option to allow users to include their private repositories in the calculated stats",
+        "Features a sign in with GitHub Oauth option allowing users to include their private repositories in the calculated stats",
+        "Powered by GitHub's REST and GraphQL endpoints",
       ]}
       techStack={[
         "React",
@@ -37,20 +38,21 @@ import ProjectCard from "../components/ProjectCard.astro";
         "Node.js",
         "Express.js",
         "GitHub API",
+        "Docker"
       ]}
       githubLink="https://github.com/mdamnjan/gh-stats-viewer"
       liveLink="https://gh-stats-viewer.up.railway.app/"
     />
     <ProjectCard
       title="Personal Website"
-      description="The website you're on right now! I recently rebuilt it using Astro.js 🚀 and Tailwind CSS.\n I used GitHub Actions to set up automatic deployment to GitHub Pages anytime I push any changes to my repository."
+      description="The website you're on right now! Recently rebuilt using Astro.js 🚀 and Tailwind CSS.\n Uses GitHub Actions to automatically deploy to GitHub Pages anytime I push changes to my repository."
       techStack={["Astro", "Tailwind CSS", "GitHub Actions", "GitHub Pages"]}
       githubLink="https://github.com/mdamnjan/mdamnjan.github.io/"
       liveLink="https://mdamnjan.github.io/"
     />
     <ProjectCard
       title="Nuit Blanche Scraper"
-      description={"A Python/Selenium scraper that grabs exhibit information from the Toronto 2023 Nuit Blanche website and preps it to be imported into Google My Maps.\n\n I used it to generate the map below (click on an icon to see get the exhibit's details and directions):"}
+      description={"A Python/Selenium scraper that grabs exhibit information from the Toronto 2023 Nuit Blanche website and preps it to be imported into Google My Maps.\n\nUsed to generate the map below (click on an icon to see get the exhibit's details and directions):"}
       techStack={["Python", "Selenium"]}
       githubLink="https://github.com/mdamnjan/nuit-blanche-scraper"
     >
@@ -64,9 +66,10 @@ import ProjectCard from "../components/ProjectCard.astro";
     </ProjectCard>
     <ProjectCard
       title="@sdelements/flan"
-      description="A handy CLI tool I helped build during my time at Security Compass that leverages Git to allow easy and efficient sharing/loading of Postgres instances."
+      description="A handy CLI tool my team and I at Security Compass built. Leverages Git to allow easy and efficient sharing/loading of Postgres instances."
       techStack={["Typescript", "Oclif"]}
       githubLink="https://github.com/sdelements/flan"
+      liveLink="https://www.npmjs.com/package/@sdelements/flan"
     />
   </ul>
 </section>
